@@ -1,5 +1,5 @@
-﻿define(['plugins/router', 'durandal/app', 'jquery', 'social'],
-    function (router, app, $, social){
+﻿define(['plugins/router', 'durandal/app', 'jquery'],
+    function (router, app, $){
     return {
         router: router,
         activate: function () {
@@ -9,8 +9,6 @@
                 { route: 'welcome', moduleId: 'viewmodels/welcome'}
             ]);
 
-
-            $('.social_active').hoverdir({});
 
             return router.activate();
         }

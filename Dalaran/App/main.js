@@ -6,17 +6,22 @@
         'transitions': '../Scripts/durandal/transitions',
         'jquery': '../Scripts/jquery-1.10.2',
         'knockout': '../Scripts/knockout-2.3.0',
-        'bookblock': '../Scripts/website/bookblock',
-        'bs': '../Scripts/website/bs',
-        'bxslider': '../Scripts/website/bxslider',
-        'easing': '../Scripts/website/easing',
-        'input-clear': '../Scripts/website/input-clear',
-        'jquery.zoom': '../Scripts/website/jquery.zoom',
-        'lib': '../Scripts/website/lib',
-        'modernizr': '../Scripts/website/modernizr',
-        'range-slider': '../Scripts/website/range-slider',
-        'social': '../Scripts/website/social',
-        'ui': '../Scripts/website/ui'
+        'modernizr': '../Scripts/modernizr-2.6.2',
+        'iosslider': '../Scripts/website/jquery.iosslider.min',
+        'magnificpopup': '../Scripts/website/jquery.magnific-popup',
+        'webplugins': '../Scripts/website/plugins',
+        'respond': '../Scripts/website/respond.min',
+        'theme': '../Scripts/website/theme'
+    },
+    shim: {
+        'webplugins': {
+            'deps': ['jquery'],
+            'exports': 'Webplugins'
+        },
+        'theme': {
+            'deps': ['jquery', 'magnificpopup', 'webplugins'],
+            'exports': 'Theme'
+        }
     }
 });
 
