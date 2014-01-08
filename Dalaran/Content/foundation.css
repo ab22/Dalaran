@@ -1315,11 +1315,7 @@ pre {
 /**********************************************************************/
 /* -- top bar -- */
 #top-bar {
-  background-color: #627f9a;
-  color: #FFF; }
-
-#top-bar li > a {
-  color: #FFF; }
+  background-color: #627f9a; }
 
 #top-bar .left-text {
   opacity: 1;
@@ -1327,8 +1323,7 @@ pre {
   padding: 10px 0; }
 
 #top-bar .right-text {
-  font-size: 80%;
-  padding: 10px 0; }
+  font-size: 80%; }
 
 #top-bar .row {
   position: relative; }
@@ -1338,6 +1333,11 @@ pre {
   font-weight: normal; }
 
 /* -- header container -- */
+.header-wrapper {
+    height: 49px;
+}
+
+
 #masthead {
   height: 120px; }
 

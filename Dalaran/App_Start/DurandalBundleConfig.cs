@@ -16,7 +16,7 @@ namespace Dalaran {
 
       bundles.Add(
       new StyleBundle("~/Content/css")
-        .Include("~/Content/bootstrap.min.css")
+        .Include("~/Content/bootstrap.css")
         .Include("~/Content/animations.css")
         .Include("~/Content/editor.css")
         .Include("~/Content/fonts.css")

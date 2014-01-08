@@ -14,4 +14,3 @@ Otros links:
 -KnockoutJs (Tutorial): http://learn.knockoutjs.com/
 -Como crear un producto en Amazon: http://www.youtube.com/watch?v=jQwrUbT8Tzc
 -DurandalJs (Documentación, código, ejemplos, etc.): http://durandaljs.com/
-
