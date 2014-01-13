@@ -10,17 +10,16 @@ namespace Dalaran {
 	  bundles.Add(
 		new ScriptBundle("~/Scripts/vendor")
 			.Include("~/Scripts/jquery-{version}.js")
-			.Include("~/Scripts/bootstrap.js")
             .Include("~/Scripts/knockout-{version}.js")
 		);
 
       bundles.Add(
       new StyleBundle("~/Content/css")
-        .Include("~/Content/bootstrap.css")
         .Include("~/Content/animations.css")
         .Include("~/Content/editor.css")
         .Include("~/Content/fonts.css")
         .Include("~/Content/foundation.css")
+        .Include("~/Content/website.css")
         .Include("~/Content/ie8.css"));
     }
 
