@@ -7,9 +7,9 @@ using Dalaran.Infrastructure.Interfaces;
 
 namespace Dalaran.Infrastructure
 {
-    public static class AutoMapperWebConfiguration : IGlobalConfiguration
+    public class AutoMapperWebConfiguration : IGlobalConfiguration
     {
-        public static void Configure()
+        public void Configure()
         {
             /* 
              * All CreateMaps must go here.
