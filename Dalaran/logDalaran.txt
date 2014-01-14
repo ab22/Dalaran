@@ -1,0 +1,3 @@
+2014-01-14 14:58:45,828 [1] WARN Dalaran.Startup - This is a warn message
+2014-01-14 14:58:45,838 [1] ERROR Dalaran.Startup - This is a error message
+2014-01-14 14:58:45,840 [1] FATAL Dalaran.Startup - This is a fatal message
