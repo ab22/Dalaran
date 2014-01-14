@@ -7,6 +7,6 @@ namespace Dalaran.Infrastructure.Interfaces
 {
     public interface IGlobalConfiguration
     {
-        public static void Configure();
+        void Configure();
     }
 }

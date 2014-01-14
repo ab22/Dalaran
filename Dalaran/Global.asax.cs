@@ -18,7 +18,7 @@ namespace Dalaran
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            AutoMapperWebConfiguration.Configure();
+            new AutoMapperWebConfiguration().Configure();
 
         }
     }
