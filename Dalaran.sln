@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dalaran", "Dalaran\Dalaran.csproj", "{0FFE4A2B-6282-4611-8DDC-BF9F3B545F63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dalaran.DAL", "Dalaran.DAL\Dalaran.DAL.csproj", "{64529B24-D985-46E9-B92C-F8D51EB43BD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0FFE4A2B-6282-4611-8DDC-BF9F3B545F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FFE4A2B-6282-4611-8DDC-BF9F3B545F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FFE4A2B-6282-4611-8DDC-BF9F3B545F63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64529B24-D985-46E9-B92C-F8D51EB43BD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64529B24-D985-46E9-B92C-F8D51EB43BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64529B24-D985-46E9-B92C-F8D51EB43BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64529B24-D985-46E9-B92C-F8D51EB43BD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
