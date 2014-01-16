@@ -2,6 +2,7 @@
 using Autofac.Integration.Mvc;
 using Dalaran.DAL;
 using Dalaran.DAL.Interfaces;
+using Dalaran.DAL.Repositories;
 using Dalaran.Infrastructure.Interfaces;
 using System.Data.Entity;
 using System.Web.Mvc;
