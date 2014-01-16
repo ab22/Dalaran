@@ -72,7 +72,7 @@
     </Compile>
     <Compile Include="Interfaces\IDataRepository.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
-    <Compile Include="MysqlRepository.cs" />
+    <Compile Include="Repositories\MysqlRepository.cs" />
     <Compile Include="ProductDescriptions.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>

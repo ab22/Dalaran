@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dalaran.DAL.Interfaces;
 
-namespace Dalaran.DAL
+namespace Dalaran.DAL.Repositories
 {
     public class MysqlRepository : Interfaces.IDataRepository
     {
