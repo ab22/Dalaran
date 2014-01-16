@@ -11,8 +11,8 @@ namespace Dalaran.DAL
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Users
+    using Dalaran.DAL.Interfaces;
+    public partial class Users : IEntity
     {
         public int UserId { get; set; }
         public string Name { get; set; }

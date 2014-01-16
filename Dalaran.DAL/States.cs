@@ -11,8 +11,8 @@ namespace Dalaran.DAL
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class States
+    using Dalaran.DAL.Interfaces;
+    public partial class States : IEntity
     {
         public States()
         {

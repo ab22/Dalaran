@@ -11,8 +11,8 @@ namespace Dalaran.DAL
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class SubCategories
+    using Dalaran.DAL.Interfaces;
+    public partial class SubCategories : IEntity
     {
         public int SubCategoryId { get; set; }
         public Nullable<int> CategoryId { get; set; }

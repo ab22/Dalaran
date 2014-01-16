@@ -11,8 +11,8 @@ namespace Dalaran.DAL
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class ProductDescriptionTypes
+    using Dalaran.DAL.Interfaces;
+    public partial class ProductDescriptionTypes : IEntity
     {
         public ProductDescriptionTypes()
         {

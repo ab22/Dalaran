@@ -11,8 +11,8 @@ namespace Dalaran.DAL
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Categories
+    using Dalaran.DAL.Interfaces;
+    public partial class Categories : IEntity
     {
         public Categories()
         {

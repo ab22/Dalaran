@@ -11,8 +11,8 @@ namespace Dalaran.DAL
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class ProductDescriptions
+    using Dalaran.DAL.Interfaces;
+    public partial class ProductDescriptions : IEntity
     {
         public int ProductDescriptionId { get; set; }
         public Nullable<int> ProductId { get; set; }
