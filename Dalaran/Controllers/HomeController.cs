@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Dalaran.DAL;
 using Dalaran.DAL.Interfaces;
 
 namespace Dalaran.Controllers
@@ -19,14 +20,12 @@ namespace Dalaran.Controllers
         public ActionResult Index()
         {
             List<string> names = new List<string>();
-            var users = repository.Select<DAL.Users>( x=> x.UserId == 1 );
+            var users = repository.Select<Users>( x => true );
 
             foreach (var u in users)
             {
                 names.Add(u.Username);
             }
-
-
             ViewBag.Users = names;
 
             return View();

@@ -71,6 +71,7 @@
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IDataRepository.cs" />
+    <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="MysqlRepository.cs" />
     <Compile Include="ProductDescriptions.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
