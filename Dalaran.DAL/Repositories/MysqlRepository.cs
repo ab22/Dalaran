@@ -6,6 +6,8 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Dalaran.DAL.Interfaces;
+using System.Data.Entity.Infrastructure;
+using System.Data;
 
 namespace Dalaran.DAL.Repositories
 {
@@ -20,7 +22,62 @@ namespace Dalaran.DAL.Repositories
 
         public IQueryable<T> Select<T>( Expression<Func<T, bool>> query) where T : class, IEntity 
         {
-            return context.Set<T>().Where(query).AsNoTracking();
+            return context.Set<T>().Where(query);
+        }
+
+        public void Update<T>(T item) where T : class, IEntity
+        {
+            DbEntityEntry entry = context.Entry(item);
+            if (entry.State == EntityState.Detached)
+            {
+                context.Set<T>().Attach(item);
+            }
+            entry.State = EntityState.Modified;
+            context.SaveChanges();
+        }
+
+        public void Create<T>(T item) where T : class, IEntity
+        {
+            context.Set<T>().Add(item);
+            context.SaveChanges();
+        }
+
+        public void Delete<T>(T item) where T : class, IEntity
+        {
+            context.Set<T>().Remove(item);
+            context.SaveChanges();
+        }
+
+        public void UpdateMany<T>(IEnumerable<T> items) where T : class, IEntity
+        {
+            foreach(var item in items)
+            {
+                DbEntityEntry entry = context.Entry(item);
+                if (entry.State == EntityState.Detached)
+                {
+                    context.Set<T>().Attach(item);
+                }
+                entry.State = EntityState.Modified;
+            }
+            context.SaveChanges();
+        }
+
+        public void CreateMany<T>(IEnumerable<T> items) where T : class, IEntity
+        {
+            foreach(var item in items)
+            {
+                context.Set<T>().Add(item);
+            }
+            context.SaveChanges();
+        }
+
+        public void DeleteMany<T>(IEnumerable<T> items) where T : class, IEntity
+        {
+            foreach (var item in items)
+            {
+                context.Set<T>().Remove(item);
+            }
+            context.SaveChanges();
         }
     }
 }

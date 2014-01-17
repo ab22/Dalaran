@@ -1,8 +1,6 @@
 ﻿using Dalaran.DAL;
 using Dalaran.DAL.Interfaces;
-using log4net;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Web.Mvc;
 
 namespace Dalaran.Controllers
@@ -15,7 +13,6 @@ namespace Dalaran.Controllers
         {
             this.repository = repository;
         }
-
         public ActionResult Index()
         {
             List<string> names = new List<string>();
@@ -27,6 +24,7 @@ namespace Dalaran.Controllers
             {
                 names.Add(u.Username);
             }
+            repository.UpdateMany(users);
             ViewBag.Users = names;
             return View();
         }
