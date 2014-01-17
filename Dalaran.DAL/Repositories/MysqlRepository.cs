@@ -36,10 +36,11 @@ namespace Dalaran.DAL.Repositories
             context.SaveChanges();
         }
 
-        public void Create<T>(T item) where T : class, IEntity
+        public T Create<T>(T item) where T : class, IEntity
         {
             context.Set<T>().Add(item);
             context.SaveChanges();
+            return item;
         }
 
         public void Delete<T>(T item) where T : class, IEntity
@@ -62,13 +63,14 @@ namespace Dalaran.DAL.Repositories
             context.SaveChanges();
         }
 
-        public void CreateMany<T>(IEnumerable<T> items) where T : class, IEntity
+        public IEnumerable<T> CreateMany<T>(IEnumerable<T> items) where T : class, IEntity
         {
             foreach(var item in items)
             {
                 context.Set<T>().Add(item);
             }
             context.SaveChanges();
+            return items;
         }
 
         public void DeleteMany<T>(IEnumerable<T> items) where T : class, IEntity
