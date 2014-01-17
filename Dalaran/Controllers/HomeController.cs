@@ -22,7 +22,7 @@ namespace Dalaran.Controllers
 
             foreach (var u in users)
             {
-                names.Add(u.Username);
+                names.Add(u.UserId + " - " + u.Username);
             }
             repository.UpdateMany(users);
             ViewBag.Users = names;
