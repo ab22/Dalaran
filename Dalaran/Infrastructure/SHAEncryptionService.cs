@@ -7,7 +7,7 @@ namespace Dalaran.Infrastructure
 {
     public class SHAEncryptionService : IEncryptionService
     {
-        string Encrypt(string data, string salt)
+        public string Encrypt(string data, string salt)
         {
             SHA256 sha256 = SHA256Managed.Create();
             byte[] saltedData = Encoding.UTF8.GetBytes(data+salt);
@@ -15,6 +15,11 @@ namespace Dalaran.Infrastructure
             byte[] hashedBytes = sha256.ComputeHash(saltedData);
 
             return BitConverter.ToString(hashedBytes);
+        }
+
+        public string GenerateSalt()
+        {
+            return Guid.NewGuid().ToString();
         }
     }
 }
