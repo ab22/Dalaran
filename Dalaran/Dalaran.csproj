@@ -177,7 +177,9 @@
     <Compile Include="Infrastructure\AutoMapperWebConfiguration.cs" />
     <Compile Include="Infrastructure\DalaranBootsrapper.cs" />
     <Compile Include="Infrastructure\Interfaces\IBaseBootstrapper.cs" />
+    <Compile Include="Infrastructure\Interfaces\IEncryptionService.cs" />
     <Compile Include="Infrastructure\Interfaces\IGlobalConfiguration.cs" />
+    <Compile Include="Infrastructure\SHAEncryptionService.cs" />
     <Compile Include="Infrastructure\WebConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
