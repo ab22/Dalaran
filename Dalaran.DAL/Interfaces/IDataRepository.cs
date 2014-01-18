@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dalaran.DAL.Interfaces
 {
@@ -13,10 +11,8 @@ namespace Dalaran.DAL.Interfaces
         void Update<T>(T item) where T : class, IEntity;
         T Create<T>(T item) where T : class, IEntity;
         void Delete<T>(T item) where T : class, IEntity;
-
         void UpdateMany<T>(IEnumerable<T> items) where T : class, IEntity;
         IEnumerable<T> CreateMany<T>(IEnumerable<T> items) where T : class, IEntity;
         void DeleteMany<T>(IEnumerable<T> items) where T : class, IEntity;
-
     }
 }
