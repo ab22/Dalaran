@@ -29,8 +29,14 @@ namespace Dalaran
                     return;
                 }
             }
+            string message = String.Format("{0} - {1}@{2}\n{3}",
+                ex.Message,
+                "Application_Error",
+                "Global.asax.cs",
+                ex.StackTrace
+                );
 
-            log.Fatal(ex.Message);
+            log.Fatal(message);
         }
     }
 }
