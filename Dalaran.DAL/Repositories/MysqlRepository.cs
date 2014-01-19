@@ -16,11 +16,22 @@ namespace Dalaran.DAL.Repositories
         public MysqlRepository(DbContext context)
         {
             this.context = context;
+            context.Configuration.LazyLoadingEnabled = false;
         }
 
-        public IQueryable<T> Select<T>( Expression<Func<T, bool>> query) where T : class, IEntity 
+        public IQueryable<T> Select<T>( Expression<Func<T, bool>> query, IQueryable<Expression<Func<T, object>>> navigationProperties = null) where T : class, IEntity 
         {
-            return context.Set<T>().Where(query);
+            IQueryable<T> iQuery = context.Set<T>();
+
+            if (navigationProperties != null) 
+            { 
+                foreach (Expression<Func<T, object>> property in navigationProperties)
+                {
+                    iQuery = iQuery.Include<T, object>(property);
+                }
+            }
+
+            return iQuery.Where(query).AsNoTracking();
         }
 
         public void Update<T>(T item) where T : class, IEntity
