@@ -1,9 +1,9 @@
-﻿using Dalaran.Infrastructure.Interfaces;
+﻿using Dalaran.Services.Interfaces;
 using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Dalaran.Infrastructure
+namespace Dalaran.Services
 {
     public class SHAEncryptionService : IEncryptionService
     {

@@ -4,6 +4,8 @@ using Dalaran.DAL;
 using Dalaran.DAL.Interfaces;
 using Dalaran.DAL.Repositories;
 using Dalaran.Infrastructure.Interfaces;
+using Dalaran.Services;
+using Dalaran.Services.Interfaces;
 using System.Data.Entity;
 using System.Web.Mvc;
 

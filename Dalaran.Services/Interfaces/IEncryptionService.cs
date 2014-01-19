@@ -1,5 +1,5 @@
 ﻿
-namespace Dalaran.Infrastructure.Interfaces
+namespace Dalaran.Services.Interfaces
 {
     public interface IEncryptionService
     {
