@@ -177,9 +177,7 @@
     <Compile Include="Infrastructure\AutoMapperWebConfiguration.cs" />
     <Compile Include="Infrastructure\DalaranBootsrapper.cs" />
     <Compile Include="Infrastructure\Interfaces\IBaseBootstrapper.cs" />
-    <Compile Include="Infrastructure\Interfaces\IEncryptionService.cs" />
     <Compile Include="Infrastructure\Interfaces\IGlobalConfiguration.cs" />
-    <Compile Include="Infrastructure\SHAEncryptionService.cs" />
     <Compile Include="Infrastructure\WebConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -294,6 +292,10 @@
     <ProjectReference Include="..\Dalaran.DAL\Dalaran.DAL.csproj">
       <Project>{64529b24-d985-46e9-b92c-f8d51eb43bd9}</Project>
       <Name>Dalaran.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dalaran.Services\Dalaran.Services.csproj">
+      <Project>{4ba6f2c5-cbe5-416b-b2e7-df124b6b5bb6}</Project>
+      <Name>Dalaran.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
