@@ -20,6 +20,7 @@ namespace Dalaran.DAL
         public Nullable<System.DateTime> DOB { get; set; }
         public string Address { get; set; }
         public string Password { get; set; }
+        public string PasswordSalt { get; set; }
         public Nullable<System.DateTime> RegisterDate { get; set; }
         public Nullable<int> Rating { get; set; }
         public string Email { get; set; }

@@ -21,5 +21,12 @@ namespace Dalaran.Services
         {
             return Guid.NewGuid().ToString();
         }
+
+        public bool Compare(string data, string salt, string password)
+        {
+            string encryptedPassword = this.Encrypt(data, salt);
+
+            return String.Equals(encryptedPassword, password);
+        }
     }
 }
