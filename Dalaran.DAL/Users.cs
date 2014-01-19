@@ -19,12 +19,12 @@ namespace Dalaran.DAL
         public string Lastname { get; set; }
         public Nullable<System.DateTime> DOB { get; set; }
         public string Address { get; set; }
-        public string Username { get; set; }
         public string Password { get; set; }
         public Nullable<System.DateTime> RegisterDate { get; set; }
         public Nullable<int> Rating { get; set; }
         public string Email { get; set; }
         public Nullable<int> CityId { get; set; }
+        public Nullable<int> AccountState { get; set; }
     
         public virtual Cities Cities { get; set; }
     }

@@ -81,12 +81,12 @@
           <Property Name="Lastname" Type="varchar" MaxLength="45" />
           <Property Name="DOB" Type="datetime" Precision="0" />
           <Property Name="Address" Type="varchar" MaxLength="45" />
-          <Property Name="Username" Type="varchar" MaxLength="45" />
+          <Property Name="Email" Type="varchar" MaxLength="45" />
           <Property Name="Password" Type="varchar" MaxLength="45" />
           <Property Name="RegisterDate" Type="datetime" Precision="0" />
           <Property Name="Rating" Type="int" />
-          <Property Name="Email" Type="varchar" MaxLength="45" />
           <Property Name="CityId" Type="int" />
+          <Property Name="AccountState" Type="int" />
         </EntityType>
         <Association Name="FK_CITIES_STATES">
           <End Role="States" Type="Self.States" Multiplicity="1" />
@@ -286,13 +286,13 @@
           <Property Name="Lastname" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="DOB" Type="DateTime" />
           <Property Name="Address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="Username" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="RegisterDate" Type="DateTime" />
           <Property Name="Rating" Type="Int32" />
           <Property Name="Email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="CityId" Type="Int32" />
           <NavigationProperty Name="Cities" Relationship="Self.FK_USERS_CITIES" FromRole="Users" ToRole="Cities" />
+          <Property Name="AccountState" Type="Int32" />
         </EntityType>
         <Association Name="FK_SUBCATEGORIES_CATEGORIES">
           <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
@@ -485,12 +485,12 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="DalaranModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="AccountState" ColumnName="AccountState" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Lastname" ColumnName="Lastname" />
                 <ScalarProperty Name="DOB" ColumnName="DOB" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
                 <ScalarProperty Name="Rating" ColumnName="Rating" />
