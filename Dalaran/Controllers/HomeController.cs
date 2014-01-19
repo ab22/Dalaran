@@ -1,6 +1,9 @@
 ﻿using Dalaran.DAL;
 using Dalaran.DAL.Interfaces;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Web.Mvc;
 
 namespace Dalaran.Controllers
@@ -16,15 +19,17 @@ namespace Dalaran.Controllers
         public ActionResult Index()
         {
             List<string> names = new List<string>();
-            var users = repository.Select<Users>( x =>  true );
-                     // repository.Select<User<( x => x.UserId == 1 ); 
-                     // ^ Funciona tmb. Cualquier query loco que se te ocurra puede ir ahi
+
+            List<Expression<Func<Users, object>>> includeList = new List<Expression<Func<Users, object>>>();
+            includeList.Add(u => u.Cities.States.Countries);
+
+            var users = repository.Select<Users>(x => true, includeList.AsQueryable());
 
             foreach (var u in users)
             {
-                names.Add(u.UserId + " - " + u.Username);
+                names.Add(String.Format("{0} - {1} - {2}", u.Cities.States.Countries.Name, u.Cities.States.Name, u.Cities.Name));
             }
-            repository.UpdateMany(users);
+
             ViewBag.Users = names;
             return View();
         }

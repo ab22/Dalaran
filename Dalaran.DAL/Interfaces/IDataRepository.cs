@@ -7,7 +7,7 @@ namespace Dalaran.DAL.Interfaces
 {
     public interface IDataRepository
     {
-        IQueryable<T> Select<T>(Expression<Func<T, bool>> query) where T: class, IEntity;
+        IQueryable<T> Select<T>(Expression<Func<T, bool>> query, IQueryable<Expression<Func<T, object>>> navigationProperties = null) where T : class, IEntity;
         void Update<T>(T item) where T : class, IEntity;
         T Create<T>(T item) where T : class, IEntity;
         void Delete<T>(T item) where T : class, IEntity;
