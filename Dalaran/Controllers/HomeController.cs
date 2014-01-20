@@ -1,5 +1,6 @@
 ﻿using Dalaran.DAL;
 using Dalaran.DAL.Interfaces;
+using Dalaran.Infrastructure.Enumerations;
 using Dalaran.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -48,7 +49,7 @@ namespace Dalaran.Controllers
 
             Cities c = repository.Select<Cities>(x => x.CityId == 2).FirstOrDefault();
             Users myUser = new Users();
-            myUser.AccountState = 0;
+            myUser.AccountState = (int)AccountState.NotValidated;
             myUser.Address = "6 y 7 calle, 4ta ave., bo. El Centro.";
             myUser.CityId = c.CityId;
             myUser.DOB = new DateTime(1990, 9, 22);
