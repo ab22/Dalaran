@@ -1,12 +1,13 @@
-﻿define(['plugins/http', 'knockout', 'jquery'],
-    function (http, ko, $) {
-        var self;
-        var Login = funtion()
-        {
-            self = this;
+﻿define(['plugins/http', 'knockout', 'jquery', 'viewmodels/shell'],
+    function (http, ko, $, shell) {
+
+        compositionComplete = function () {
+            shell.loggedIn(true);
         };
 
-        return Login;
+        return {
+            compositionComplete: compositionComplete
+        };
 
     }
 );
