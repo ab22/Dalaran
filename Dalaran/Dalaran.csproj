@@ -15,7 +15,7 @@
     <AssemblyName>Dalaran</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -186,8 +186,10 @@
   <ItemGroup>
     <Content Include="App\main.js" />
     <Content Include="App\viewmodels\home.js" />
+    <Content Include="App\viewmodels\login.js" />
     <Content Include="App\viewmodels\shell.js" />
     <Content Include="App\views\home.html" />
+    <Content Include="App\views\login.html" />
     <Content Include="App\views\shell.html" />
     <Content Include="Content\animations.css" />
     <Content Include="Content\backgroundsize.htc" />
@@ -312,7 +314,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2846</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8085</IISUrl>
+          <IISUrl>http://localhost:2846/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
