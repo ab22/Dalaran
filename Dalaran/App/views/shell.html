@@ -8,7 +8,8 @@
                             <ul id="menu-top-nav-and-footer-nav" class="top-bar-nav">
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="pages/contact-us/index.html" class="nav-top-link">Contact us</a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="pages/faq/index.html" class="nav-top-link">FAQ</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#login" class="nav-top-link">Login</a></li>
+                                <li data-bind="visible: !loggedIn()" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#login" class="nav-top-link">Login</a></li>
+                                <li data-bind="visible: loggedIn()" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#login" class="nav-top-link">My Account</a></li>
                             </ul>
                         </div>
                     </div>
@@ -26,7 +27,7 @@
 
 
                         <div id="logo" class="logo-left">
-                            <a href="index.html" title="" rel="home">
+                            <a href="#" title="" rel="home">
                                 <img src="http://flatsome.uxthemes.com/wp-content/uploads/sites/2/2013/08/logo_example.png" class="header_logo" alt="Flatsome" />
                             </a>
                         </div><!-- .logo -->
