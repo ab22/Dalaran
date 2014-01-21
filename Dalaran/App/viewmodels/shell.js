@@ -7,8 +7,9 @@
             this.activate = function () {
                 router.map([
                     { route: '', title: 'Home', moduleId: 'viewmodels/home' },
-                    { route: 'flickr', moduleId: 'viewmodels/flickr' },
-                    { route: 'welcome', moduleId: 'viewmodels/welcome' }
+                    { route: 'login', moduleId: 'viewmodels/login' }
+                   
+                    
                 ]);
                 return router.activate();
             };
