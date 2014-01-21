@@ -24,23 +24,6 @@ namespace Dalaran.Controllers
         }
         public ActionResult Index()
         {
-            List<string> names = new List<string>();
-
-            List<Expression<Func<Users, object>>> includeList = new List<Expression<Func<Users, object>>>();
-            includeList.Add(u => u.Cities.States.Countries);
-
-            var users = repository.Select<Users>(x => true, includeList.AsQueryable());
-            if (users.Count() <= 1)
-            {
-                CreateUser();
-            }
-
-            foreach (var u in users)
-            {
-                names.Add(String.Format("{0} - {1} - {2}", u.Cities.States.Countries.Name, u.Cities.States.Name, u.Cities.Name));
-            }
-
-            ViewBag.Users = names;
             return View();
         }
 

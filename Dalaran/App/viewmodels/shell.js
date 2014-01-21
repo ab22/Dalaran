@@ -3,12 +3,6 @@
         var self;
         var Shell = function(){
             self = this;
-            this.MenuItems = ko.observableArray([
-                { Name: 'Home' },
-                { Name: 'About us' },
-                { Name: 'Contact us' },
-                { Name: 'Account' }
-            ]);
             this.router = router;
             this.activate = function () {
                 router.map([

@@ -79,10 +79,10 @@
         }
 
         Home.prototype.compositionComplete = function(){
-            $('#slider_1305397119').find('br').remove();
+            $('#mainSlider').find('br').remove();
 
             /* full width slider */
-            $('#slider_1305397119').iosSlider({
+            $('#mainSlider').iosSlider({
                 snapToChildren: true,
                 desktopClickDrag: true,
                 snapFrictionCoefficient: 0.8,
