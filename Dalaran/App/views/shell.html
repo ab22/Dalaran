@@ -24,234 +24,26 @@
                 <div class="row">
                     <div class="large-12 columns header-container">
                         <div class="mobile-menu show-for-small"><a href="#open-menu"><span class="icon-menu"></span></a></div>
-
-
                         <div id="logo" class="logo-left">
                             <a href="#" title="" rel="home">
                                 <img src="http://flatsome.uxthemes.com/wp-content/uploads/sites/2/2013/08/logo_example.png" class="header_logo" alt="Flatsome" />
                             </a>
-                        </div><!-- .logo -->
+                        </div>
 
-                        <div class="left-links">
-                            <ul id="site-navigation" class="header-nav">
-
-                                <li class="search-dropdown">
-                                    <a href="#" class="nav-top-link icon-search" onclick="return false;"></a>
-                                    <div class="nav-dropdown">
-
-
-
-                                        <div class="row collapse search-wrapper yith-ajaxsearchform-container 1426837724_container">
-                                            <form role="search" method="get" id="yith-ajaxsearchform" action="http://flatsome.uxthemes.com/">
-                                                <div class="large-10 small-10 columns">
-                                                    <input type="search" value="" name="s" id="1426837724_yith" placeholder="Search for products" />
-                                                </div><!-- input -->
-                                                <div class="large-2 small-2 columns">
-                                                    <button type="submit" id="yith-searchsubmit" class="button secondary postfix"><i class="icon-search"></i></button>
-                                                    <input type="hidden" name="post_type" value="product" />
-                                                </div><!-- button -->
-                                            </form>
-                                        </div><!-- row -->
-
-                                        <script type="text/javascript">
-                                            jQuery(function ($) {
-                                                $('#1426837724_yith').autocomplete({
-                                                    minChars: 3,
-                                                    appendTo: '.1426837724_container',
-                                                    serviceUrl: woocommerce_params.ajax_url + '?action=yith_ajax_search_products',
-                                                    onSearchStart: function () {
-                                                        $('.1426837724_container').append('<div class="loading"><i></i><i></i><i></i><i></i></div>');
-                                                    },
-                                                    onSearchComplete: function () {
-                                                        $('.1426837724_container .loading').remove();
-
-                                                    },
-                                                    onSelect: function (suggestion) {
-                                                        if (suggestion.id != -1) {
-                                                            window.location.href = suggestion.url;
-                                                        }
-                                                    }
-                                                });
-                                            });
-                                        </script>
-                                    </div><!-- .nav-dropdown -->
-                                </li><!-- .search-dropdown -->
-
-                                <li id="menu-item-504" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-17 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-parent-item menu-item-504">
-                                    <a href="index.html" class="nav-top-link">Homepage</a>
-                                    <div class=nav-dropdown>
-                                        <ul>
-                                            <li id="menu-item-1366" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children menu-parent-item menu-item-1366">
-                                                <a href="index.html">Homepages</a>
-                                                <div class=nav-column-links>
-                                                    <ul>
-                                                        <li id="menu-item-506" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-17 current_page_item menu-item-506"><a href="index.html">Long</a></li>
-                                                        <li id="menu-item-505" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505"><a href="homepage/homepage-2-simple/index.html">Simple</a></li>
-                                                        <li id="menu-item-674" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-674"><a href="homepage/homepage-3-ultra-simple/index8dbd.html?simple">Ultra simple</a></li>
-                                                        <li id="menu-item-626" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-626"><a href="homepage/homepage-4-grid-style/index.html">Grid style</a></li>
-                                                        <li id="menu-item-2139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2139"><a href="homepage/homepage-8-grid-style-2/index.html">Grid Style 2</a></li>
-                                                        <li id="menu-item-761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-761"><a href="homepage/homepage-5-parallax-banner/index.html">Parallax style</a></li>
-                                                        <li id="menu-item-1999" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1999"><a href="homepage/homepage-6-video-v-1-7/index.html">Video slider &#8211; NEW</a></li>
-                                                        <li id="menu-item-2018" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2018"><a href="homepage/homepage-7-video-blank-header/indexac1d.html?dark_header&amp;header_center">Transparent header</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li id="menu-item-1367" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-parent-item menu-item-1367">
-                                                <a href="index.html">Header Examples</a>
-                                                <div class=nav-column-links>
-                                                    <ul>
-                                                        <li id="menu-item-2016" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2016"><a href="indexea4f.html?dark_header">Dark header</a></li>
-                                                        <li id="menu-item-1368" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1368"><a href="homepage/homepage-3-ultra-simple/indexe509.html?header_center">Logo Center</a></li>
-                                                        <li id="menu-item-1369" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1369"><a href="homepage/homepage-3-ultra-simple/indexfb8b.html?header_center_widenav">Wide Nav Logo Center</a></li>
-                                                        <li id="menu-item-1370" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1370"><a href="indexefac.html?header_widenav_light">Wide Nav Light</a></li>
-                                                        <li id="menu-item-1371" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1371"><a href="index0d9c.html?header_widenav_dark">Wide Nav Dark</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                        </ul>
+                        <div class="search-navbar">
+                                <div class="row collapse search-wrapper yith-ajaxsearchform-container">
+                                    <div class="large-10 small-10 columns">
+                                        <input value="" name="s" placeholder="" type="search">
                                     </div>
-                                </li>
-                                <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-parent-item menu-item-52">
-                                    <a href="shop/index.html" class="nav-top-link">Shop</a>
-                                    <div class=nav-dropdown>
-                                        <ul>
-                                            <li id="menu-item-438" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-438">
-                                                <a href="shop/index.html">Categories</a>
-                                                <div class=nav-column-links>
-                                                    <ul>
-                                                        <li id="menu-item-439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-439"><a href="product-category/women/index.html">Sidebar &#8211; Left</a></li>
-                                                        <li id="menu-item-667" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-667"><a href="product-category/women/indexedc7.html?right_sidebar">Sidebar &#8211; Right</a></li>
-                                                        <li id="menu-item-440" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-440"><a href="product-category/women/indexfaf7.html?no_sidebar">Full width</a></li>
-                                                        <li id="menu-item-449" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-449"><a href="product-category/women/index.html">Top slider</a></li>
-                                                        <li id="menu-item-445" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-445"><a href="product-category/men/index.html">Top banner</a></li>
-                                                        <li id="menu-item-448" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-448"><a href="product-category/men/index.html">Shop Men</a></li>
-                                                        <li id="menu-item-1923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1923"><a href="shop/index4681.html?dark_bg">Dark background</a></li>
-                                                        <li id="menu-item-444" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-444"><a href="product-category/men/index6d3b.html?catalog-mode">Catalog Mode</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li id="menu-item-441" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-441">
-                                                <a href="../uxthemes.wpengine.com/shop/index.html">Product Page</a>
-                                                <div class=nav-column-links>
-                                                    <ul>
-                                                        <li id="menu-item-442" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-442"><a href="product/all-star-canvas-hi-converse/index.html">With variations</a></li>
-                                                        <li id="menu-item-443" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-443"><a href="product/harissa-o-neck-sweat/index.html">With upsell</a></li>
-                                                        <li id="menu-item-446" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-446"><a href="product/harissa-o-neck-sweat/index99e6.html?section_style">Section style</a></li>
-                                                        <li id="menu-item-607" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-607"><a href="product/lucy-slim-jeans-noisy-may/index.html">Tab style</a></li>
-                                                        <li id="menu-item-447" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-447"><a href="product/lucy-slim-jeans-noisy-may/index6445.html?right_product">Right sidebar</a></li>
-                                                        <li id="menu-item-1113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1113"><a href="product/lucy-slim-jeans-noisy-may/index7015.html?left_product">Left sidebar</a></li>
-                                                        <li id="menu-item-1922" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1922"><a href="product/all-star-canvas-hi-converse/index4681.html?dark_bg">Dark background</a></li>
-                                                        <li id="menu-item-900" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-900"><a href="product/lucy-slim-jeans-noisy-may/indexf931.html?catalog-mode&amp;search">Catalog Mode</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li id="menu-item-616" class="image-column menu-item menu-item-type-custom menu-item-object-custom menu-item-616"><a href="product-category/women/index.html">Image Column<img src="wp-content/uploads/sites/2/2013/12/christmas-happy.jpg" alt=" " /></a></li>
-                                        </ul>
+                                    <div class="large-2 small-2 columns">
+                                        <button type="submit" class="button secondary postfix"><i class="icon-search"></i></button>
+                                        <input name="post_type" value="product" type="hidden">
                                     </div>
-                                </li>
-                                <li id="menu-item-290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-parent-item menu-item-290">
-                                    <a href="shortcodes/index.html" class="nav-top-link">Shortcodes</a>
-                                    <div class=nav-dropdown>
-                                        <ul>
-                                            <li id="menu-item-632" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-parent-item menu-item-632">
-                                                <a href="shortcodes/shortcode-overview/index.html">Overview</a>
-                                                <div class=nav-column-links>
-                                                    <ul>
-                                                        <li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-460"><a href="shortcodes/shortcode-banners/index.html">UX Banners</a></li>
-                                                        <li id="menu-item-465" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-465"><a href="shortcodes/shortcode-ux-sliders/index.html">UX Sliders</a></li>
-                                                        <li id="menu-item-634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-634"><a href="shortcodes/shortcode-buttons/index.html">Buttons</a></li>
-                                                        <li id="menu-item-455" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-455"><a href="shortcodes/shortcode-tabs-accordian/index.html">Tabs / Accordian</a></li>
-                                                        <li id="menu-item-461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-461"><a href="shortcodes/shortcode-blog-posts/index.html">Blog posts slider</a></li>
-                                                        <li id="menu-item-517" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-517"><a href="shortcodes/shortcode-google-map/index.html">Google map</a></li>
-                                                        <li id="menu-item-646" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a href="shortcodes/shortcode-sharefollow-icons/index.html">Share/follow icons</a></li>
-                                                        <li id="menu-item-647" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-647"><a href="shortcodes/shortcode-team-members/index.html">Team members</a></li>
-                                                        <li id="menu-item-789" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-789"><a href="shortcodes/shortcode-testemonials/index.html">Testemonials</a></li>
-                                                        <li id="menu-item-648" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-648"><a href="shortcodes/shortcode-featured-boxes/index.html">Featured boxes</a></li>
-                                                        <li id="menu-item-649" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-649"><a href="shortcodes/shortcode-titles-dividers/index.html">Titles / Dividers</a></li>
-                                                        <li id="menu-item-672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-672"><a href="shortcodes/shortcode-message-box/index.html">Message box</a></li>
-                                                        <li id="menu-item-2061" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2061"><a href="shortcodes/shortcode-lightbox/index.html">Lightbox</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li id="menu-item-633" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-633">
-                                                <a href="#">Shop shortcodes</a>
-                                                <div class=nav-column-links>
-                                                    <ul>
-                                                        <li id="menu-item-662" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-662"><a href="shortcodes/shortcode-product-sliders/index.html">Product sliders</a></li>
-                                                        <li id="menu-item-291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291"><a href="shortcodes/pinterest-style/index.html">Pinterest Style</a></li>
-                                                        <li id="menu-item-657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-657"><a href="shortcodes/shortcode-products-by-skuid/index.html">Products by SKU/ID</a></li>
-                                                        <li id="menu-item-658" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-658"><a href="shortcodes/shortcode-product-categories/index.html">Product Categories</a></li>
-                                                        <li id="menu-item-659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-659"><a href="shortcodes/shortcode-recent-products/index.html">Recent Products</a></li>
-                                                        <li id="menu-item-660" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-660"><a href="shortcodes/shortcode-featured-products/index.html">Featured Products</a></li>
-                                                        <li id="menu-item-661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-661"><a href="shortcodes/shortcode-product-lookbook/index.html">Product lookbook</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li id="menu-item-528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-parent-item menu-item-528">
-                                    <a href="pages/index.html" class="nav-top-link">Pages</a>
-                                    <div class=nav-dropdown>
-                                        <ul>
-                                            <li id="menu-item-597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-597"><a href="features/index.html">Theme Features</a></li>
-                                            <li id="menu-item-780" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-780"><a href="featured-item-portfolio/index.html">Portfolio</a></li>
-                                            <li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529"><a href="pages/about-us/index.html">About us</a></li>
-                                            <li id="menu-item-531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-531"><a href="blog/index.html">Blog</a></li>
-                                            <li id="menu-item-2028" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2028"><a href="blog/indexe9f3.html?list_style">Blog &#8211; List style</a></li>
-                                            <li id="menu-item-2029" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2029"><a href="blog/indexf427.html?pinterest_style">Blog &#8211; Pinterest style</a></li>
-                                            <li id="menu-item-536" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-536"><a href="pages/contact-us/index.html">Contact us</a></li>
-                                            <li id="menu-item-549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-549"><a href="pages/faq/index.html">FAQs</a></li>
-                                            <li id="menu-item-690" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-690"><a href="wishlist/index.html">Wishlist</a></li>
-                                            <li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="pages/our-services/index.html">Our Services</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li id="menu-item-705" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-705"><a href="../themeforest.net/item/flat-responsive-woocommerce-theme/5484319.html" class="nav-top-link">Buy</a></li>
-
-
-
-                            </ul>
-                        </div><!-- .left-links -->
-
-
-                        <div class="right-links">
-
-                            <ul class="header-nav">
-                                <li class="account-dropdown hide-for-small">
-                                    <a href="my-account/index.html" class="nav-top-link">Login</a>
-
-                                </li>
-
-
-                                <!-- Show mini cart if Woocommerce is activated -->
-
-                                <li class="mini-cart">
-                                    <div class="cart-inner">
-                                        <a href="cart/index.html" class="cart-link">
-                                            <strong class="cart-name hide-for-small">Cart</strong>
-                                            <span class="cart-price hide-for-small">/ <span class="amount">&#36;0</span></span>
-                                            <!-- cart icon -->
-                                            <div class="cart-icon">
-
-                                                <strong>0</strong>
-                                                <span class="cart-icon-handle"></span>
-                                            </div><!-- end cart icon -->
-                                        </a>
-                                        <div class="nav-dropdown">
-                                            <div class="nav-dropdown-inner">
-                                                <!-- Add a spinner before cart ajax content is loaded -->
-                                                <p class="empty">No products in the cart.</p>
-                                            </div><!-- nav-dropdown-innner -->
-                                        </div><!-- .nav-dropdown -->
-                                    </div><!-- .cart-inner -->
-                                </li><!-- .mini-cart -->
-                            </ul><!-- .header-nav -->
-
-                        </div><!-- .right-links -->
-                    </div><!-- .large-12 -->
-                </div><!-- .row -->
-            </header><!-- .header -->
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
         </div>
 
     </div>
