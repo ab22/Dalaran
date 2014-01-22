@@ -578,9 +578,6 @@ body.boxed #wrapper {
 }
 
 /* -- global text styles --  */
-.uppercase {
-    text-transform: uppercase;
-}
 
 p:empty {
     display: none !important;
@@ -759,7 +756,6 @@ ul.tabs {
         .tabbed-content ul.tabs li a {
             color: #999;
             font-weight: bold;
-            text-transform: uppercase;
             margin-right: 25px;
             font-size: 90%;
             border-top: 4px solid #fff;
@@ -813,7 +809,6 @@ ul.tabs {
     .vertical-tabs ul.tabs-nav li {
         list-style: none;
         font-size: 90%;
-        text-transform: uppercase;
         font-weight: bold;
     }
 
@@ -1139,7 +1134,6 @@ ul.page-numbers {
 /* -- section titles -- */
 h3.section-title {
     margin: 0 0 20px;
-    text-transform: uppercase;
     border-bottom: 3px solid #f1f1f1;
 }
 
@@ -1321,7 +1315,6 @@ h3.section-title {
 
 .custom select {
     -webkit-appearance: none;
-    text-transform: uppercase;
     font-size: 90%;
     color: #333;
     line-height: 1;
@@ -1615,7 +1608,6 @@ pre {
 /* -- logo -- */
 #logo {
     height: 100%;
-    text-transform: uppercase;
     padding: 10px 0 15px;
     display: table-cell;
     vertical-align: middle;
@@ -1759,7 +1751,6 @@ ul.header-nav {
             -webkit-transition: all 200ms ease-out;
             -moz-transition: all 200ms ease-out;
             transition: all 200ms ease-out;
-            text-transform: uppercase;
             font-size: 80%;
             font-weight: bold;
             padding: 10px 0;
@@ -2092,7 +2083,6 @@ ul.top-bar-nav {
             font-size: 90%;
             display: block;
             color: #111111 !important;
-            text-transform: uppercase;
             padding: 5px 10px;
             border: 0;
         }
@@ -2249,7 +2239,6 @@ ul.top-bar-nav {
     color: #777777 !important;
     font-size: 95%;
     display: block;
-    text-transform: uppercase;
     padding: 10px 0;
     border-bottom: 1px solid #EEE;
 }
@@ -2319,7 +2308,6 @@ ul.top-bar-nav {
             .absolute-footer ul li a {
                 display: block;
                 padding-bottom: 5px;
-                text-transform: uppercase;
                 font-size: 80%;
                 color: #999;
             }
@@ -2369,12 +2357,10 @@ h1.entry-title {
 
 .type-page h1.entry-title, .search-results .text-center h1.entry-title {
     margin-bottom: 30px;
-    text-transform: uppercase;
 }
 
 .type-page .text-center h1.entry-title, .search-results .text-center h1.entry-title {
     margin-bottom: 15px;
-    text-transform: uppercase;
 }
 
 /* -- entry image -- */
@@ -2420,7 +2406,6 @@ h1.entry-title {
 /* -- archive -- */
 body.archive h1.page-title, body.search-results h1.page-title {
     font-size: 120%;
-    text-transform: uppercase;
     text-align: center;
     margin-bottom: 30px;
     color: #777;
@@ -2446,7 +2431,6 @@ body.archive h1.page-title, body.search-results h1.page-title {
         display: block;
         border: 3px solid #627f9a;
         padding: 5px 10px 7px;
-        text-transform: uppercase;
     }
 
         .navigation-paging a:hover, .navigation-image a:hover {
@@ -2477,7 +2461,6 @@ body.archive h1.page-title, body.search-results h1.page-title {
     -moz-transition: all 200ms ease-out;
     transition: all 200ms ease-out;
     line-height: 100%;
-    text-transform: uppercase;
 }
 
     .post-date .post-date-day {
@@ -2506,10 +2489,6 @@ body.archive h1.page-title, body.search-results h1.page-title {
 
     .author-box .author-name {
         margin: 0;
-    }
-
-    .author-box .author-title {
-        text-transform: uppercase;
     }
 
 /* -- blog footer --*/
@@ -2639,7 +2618,6 @@ footer.entry-meta {
     }
 
     .blog-list-style .cat-links a {
-        text-transform: uppercase;
         color: #999;
         font-size: 80%;
     }
@@ -2653,7 +2631,6 @@ footer.entry-meta {
 }
 
 .blog-pinterest-style .cat-links a {
-    text-transform: uppercase;
     color: #999;
     font-size: 80%;
 }
@@ -2677,7 +2654,6 @@ footer.entry-meta {
 
 .blog-pinterest-style .comments-link a, .blog-pinterest-style span.sep, .blog-pinterest-style .tags-links {
     font-size: 60%;
-    text-transform: uppercase;
     color: #555;
 }
 
@@ -2769,7 +2745,6 @@ embed, iframe, object {
 }
 
 .comments-title {
-    text-transform: uppercase;
     font-weight: normal;
 }
 
@@ -2800,7 +2775,6 @@ embed, iframe, object {
 
 .comment-meta.commentmetadata {
     font-size: 70%;
-    text-transform: uppercase;
 }
 
 .comment-form-author input, .comment-form-email input, .comment-form-url input {
@@ -2871,14 +2845,12 @@ embed, iframe, object {
 
 /* -- ACCOUNT PAGES -- */
 .my-account h1 {
-    text-transform: uppercase;
     padding-bottom: 15px;
     border-bottom: 1px solid #DDD;
     margin-bottom: 30px;
 }
 
 .my-account h2 {
-    text-transform: uppercase;
     color: #777;
     font-size: 120%;
 }
@@ -2910,7 +2882,6 @@ td.order-actions {
     }
 
         .account-user span a {
-            text-transform: uppercase;
             display: inline-block;
             margin-top: 4px;
             font-size: 60%;
@@ -2950,14 +2921,12 @@ li.featured-item a {
 }
 
 li.featured-item h3 {
-    text-transform: uppercase;
     line-height: 95%;
     font-size: 100%;
     padding-top: 15px;
 }
 
 .featured_item_cats {
-    text-transform: uppercase;
     color: #777;
     font-size: 80%;
     display: block;
@@ -2968,10 +2937,6 @@ li.featured-item h3 {
         color: #999;
         font-weight: bold;
     }
-
-.page-featured-item h1 {
-    text-transform: uppercase;
-}
 
 .featured_item_image {
     overflow: hidden;
@@ -2995,7 +2960,6 @@ li.featured-item:hover a {
 }
 
 .page-featured-item .item-tags {
-    text-transform: uppercase;
     font-size: 80%;
     padding-top: 10px;
     border-top: 1px dotted #ddd;
@@ -3017,7 +2981,6 @@ li.featured-item:hover a {
     top: 0;
     left: 0;
     z-index: 10;
-    text-transform: uppercase;
     opacity: 0.8;
     font-weight: bold;
 }
@@ -3038,9 +3001,7 @@ li.featured-item:hover a {
 }
 
 .breadcrumb {
-    text-transform: uppercase;
     font-size: 140%;
-    text-transform: uppercase;
 }
 
 .breadcrumb-medium h3.breadcrumb {
@@ -3124,7 +3085,7 @@ h4.breadcrumb {
     }
 
         .product-category .header-title h3 {
-            text-transform: uppercase;
+            
             font-size: 110%;
             font-weight: bolder;
         }
@@ -3160,7 +3121,7 @@ ul.products {
 
     .product-small h5 {
         margin-bottom: 0px;
-        text-transform: uppercase;
+        
         font-size: 70%;
         color: #999;
         font-weight: bolder;
@@ -3261,7 +3222,7 @@ img.attachment-shop_catalog, img.attachment-shop_single, img.attachment-shop_thu
     left: 0px;
     top: 20px;
     z-index: 9;
-    text-transform: uppercase;
+    
     pointer-events: none;
 }
 
@@ -3321,7 +3282,7 @@ img.attachment-shop_catalog, img.attachment-shop_single, img.attachment-shop_thu
     color: #fff;
     background: #627f9a;
     text-align: center;
-    text-transform: uppercase;
+    
     padding: 5px 0;
     -webkit-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
@@ -3470,7 +3431,7 @@ img.attachment-shop_catalog, img.attachment-shop_single, img.attachment-shop_thu
 
     .product-page-aside h6 {
         font-size: 11px;
-        text-transform: uppercase;
+        
     }
 
     .product-page-aside .product {
@@ -3537,7 +3498,7 @@ img.attachment-shop_catalog, img.attachment-shop_single, img.attachment-shop_thu
 
 .product-info h4 a {
     font-size: 70%;
-    text-transform: uppercase;
+    
 }
 
 /* -- attributes tab--  */
@@ -3572,13 +3533,13 @@ img.attachment-shop_catalog, img.attachment-shop_single, img.attachment-shop_thu
 
 /* -- related products --*/
 .related-product h2 {
-    text-transform: uppercase;
+    
     padding-top: 0;
 }
 
 /* --  Product info section style -- */
 .product-page-sections h5 {
-    text-transform: uppercase;
+    
     opacity: 0.6;
     color: #111;
 }
@@ -3947,7 +3908,7 @@ li.mini-cart .cart_list {
 .mini-cart-item .cart_list_product_quantity, .mini-cart-item .cart_list_product_price {
     font-size: 75%;
     display: inline-block;
-    text-transform: uppercase;
+    
 }
 
 .mini-cart-item .cart_list_product_price {
@@ -3963,7 +3924,7 @@ li.mini-cart .cart_list {
     text-align: center;
     padding: 0 0 7px;
     margin-bottom: 10px;
-    text-transform: uppercase;
+    
 }
 
     .minicart_total_checkout span.amount {
@@ -4067,7 +4028,7 @@ table tr {
     }
 
 .shop_table tfoot th {
-    text-transform: uppercase;
+    
     font-size: 80%;
 }
 
@@ -4107,7 +4068,7 @@ ul#shipping_method {
 
     .shop_table thead {
         border-bottom: 3px solid #dddddd;
-        text-transform: uppercase;
+        
         color: #333;
     }
 
@@ -4160,7 +4121,7 @@ ul#shipping_method {
 }
 
 a.shipping-calculator-button {
-    text-transform: uppercase;
+    
     font-size: 70%;
     margin-top: 15px;
     padding-top: 5px;
@@ -4172,7 +4133,7 @@ a.shipping-calculator-button {
 /* -- cross sells -- */
 .cross-sells h2 {
     font-size: 100%;
-    text-transform: uppercase;
+    
     margin-top: 30px;
     margin-bottom: 15px;
     padding-top: 15px;
@@ -4199,7 +4160,7 @@ a.shipping-calculator-button {
 .checkout-breadcrumb h1 {
     text-align: center;
     margin-bottom: 30px;
-    text-transform: uppercase;
+    
     padding-bottom: 30px;
     font-weight: normal;
     color: #ccc;
@@ -4230,7 +4191,7 @@ a.shipping-calculator-button {
 .checkout-group h3 {
     color: #627f9a;
     font-size: 130%;
-    text-transform: uppercase;
+    
     padding: 8px 0 10px;
     margin-bottom: 15px;
     border-top: 3px solid #dddddd;
@@ -4297,7 +4258,7 @@ p.create-account-row {
 .order-review h3 {
     padding: 0 0 10px;
     color: #627f9a;
-    text-transform: uppercase;
+    
 }
 
 ul.payment_methods {
@@ -5568,9 +5529,8 @@ img.mfp-img {
 .blog_shortcode_item .from_the_blog_comments {
     font-size: 60%;
     color: #ccc;
-    text-decoration: uppercase;
     margin-top: 5px;
-    text-transform: uppercase;
+    
 }
 
 .blog_shortcode_item:hover .from_the_blog_comments {
@@ -5638,7 +5598,7 @@ img.mfp-img {
     }
 
         .featured-product .product-text h3 {
-            text-transform: uppercase;
+            
             color: #fff;
         }
 
@@ -5781,7 +5741,7 @@ ul.pinterest-style {
     }
 
     .featured-box h4 {
-        text-transform: uppercase;
+        
     }
 
     .featured-box.pos-left {
@@ -5817,7 +5777,7 @@ ul.pinterest-style {
 }
 
 .team-member h5 {
-    text-transform: uppercase;
+    
     font-weight: normal;
     color: #999;
 }
@@ -5827,7 +5787,7 @@ ul.pinterest-style {
     background-repeat: repeat-x;
     padding: 10px;
     text-align: center;
-    text-transform: uppercase;
+    
     font-weight: bold;
     font-size: 110%;
 }
@@ -5873,7 +5833,7 @@ p.product.woocommerce {
     }
 
 .widget-title {
-    text-transform: uppercase;
+    
     font-size: 95%;
 }
 
@@ -5913,7 +5873,7 @@ p.product.woocommerce {
     padding: 8px 0;
     color: #777;
     display: inline-block;
-    text-transform: uppercase;
+    
 }
 
     .widget_product_categories li a:hover, .widget_layered_nav li a:hover, .widget_layered_nav_filters li a:hover {
@@ -6049,7 +6009,7 @@ p.product.woocommerce {
 .widget_shopping_cart_content .buttons .button {
     width: 100%;
     padding: 10px;
-    text-transform: uppercase;
+    
     font-size: 90%;
     margin: 0 0 5px 0;
 }
@@ -6094,7 +6054,7 @@ p.product.woocommerce {
 
 /* -- calender widget -- */
 .widget_calendar caption {
-    text-transform: uppercase;
+    
     font-weight: bold;
     padding: 15px 0px;
     border-top: 2px solid #dddddd;
@@ -6110,7 +6070,7 @@ p.product.woocommerce {
     }
 
 .widget_rss .rss-date {
-    text-transform: uppercase;
+    
     font-size: 80%;
 }
 
@@ -6122,7 +6082,7 @@ p.product.woocommerce {
 
 .widget_nav_menu ul li {
     font-size: 90%;
-    text-transform: uppercase;
+    
     font-weight: bold;
 }
 
@@ -7075,7 +7035,7 @@ dl dd {
 /* Abbreviations */
 abbr,
 acronym {
-    text-transform: uppercase;
+    
     font-size: 90%;
     color: #777777;
     border-bottom: 1px dotted #dddddd;
@@ -7237,7 +7197,7 @@ blockquote {
 
 #submit, button, .button, input[type="submit"] {
     border: 0;
-    text-transform: uppercase;
+    
     cursor: pointer;
     font-family: inherit;
     font-weight: normal;
@@ -8122,4 +8082,9 @@ table {
 
     .search-navbar button{
         width: 50px;
+    }
+
+    .footer-wrapper{
+        background-color: #777;
+        color: #FFF;
     }
