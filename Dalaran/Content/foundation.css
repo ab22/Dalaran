@@ -8109,3 +8109,17 @@ table {
     table tr:last-child {
         border-bottom: 0;
     }
+
+    #logo{
+        width: 200px;
+        margin-left: 0;
+    }
+
+    .search-navbar{
+        padding-top: 50px;
+        padding-left: 50px;
+    }
+
+    .search-navbar button{
+        width: 50px;
+    }
