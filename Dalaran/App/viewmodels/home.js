@@ -97,12 +97,8 @@
                 onSliderResize: slideResize,
             });
 
-
-            /****** DIV fixes *********/
-            /* vertical center texts in banners */
             $('.ux_banner .center').vAlign();
-
-            /* remove BR after titles and rows */
+            
             $('.row ~ br').remove();
             $('.columns ~ br').remove();
             $('.columns ~ p').remove();
