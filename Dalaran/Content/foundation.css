@@ -2102,6 +2102,9 @@ ul.top-bar-nav {
     -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4);
     box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4);
 }
+    .wide-nav-right .social-icons{
+        padding-top: 10px;
+    }
 
     .wide-nav .header-nav > li {
         margin-left: 0;
