@@ -1,5 +1,6 @@
 ﻿using Dalaran.DAL;
 using Dalaran.DAL.Interfaces;
+using Dalaran.Infrastructure.CustomAttributes;
 using Dalaran.Infrastructure.Enumerations;
 using Dalaran.Models;
 using Dalaran.Services.Interfaces;
@@ -35,9 +36,9 @@ namespace Dalaran.Controllers
         public JsonResult Login(string Email, string Password)
         {
             //if( database.users.matches(email, password){
-            this.StartSession(0, Email);
+            //this.StartSession(0, Email);
             //}
-            return Json("", JsonRequestBehavior.DenyGet);
+            return Json( "Done" , JsonRequestBehavior.DenyGet);
         }
 
         private void StartSession(int UserId, string Email)
