@@ -23,7 +23,6 @@ namespace Dalaran.Infrastructure.CustomAttributes
             }catch(ArgumentException){
                 return false;
             }
-
             return base.AuthorizeCore(httpContext);
         }
 
@@ -32,6 +31,7 @@ namespace Dalaran.Infrastructure.CustomAttributes
             HttpCookie cookie = filterContext.HttpContext.Request.Cookies[FormsAuthentication.FormsCookieName];
             if (cookie == null)
             {
+                filterContext.HttpContext.Response.SuppressFormsAuthenticationRedirect = true;
                 filterContext.Result = new HttpStatusCodeResult(401);
                 return;
             }
@@ -40,6 +40,7 @@ namespace Dalaran.Infrastructure.CustomAttributes
             {
                 string userData = FormsAuthentication.Decrypt(cookie.Value).UserData;
             }catch(ArgumentException){
+                filterContext.HttpContext.Response.SuppressFormsAuthenticationRedirect = true;
                 filterContext.Result = new HttpStatusCodeResult(401);
                 return;
             }
