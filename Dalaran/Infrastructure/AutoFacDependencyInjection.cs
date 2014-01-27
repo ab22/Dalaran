@@ -42,6 +42,10 @@ namespace Dalaran.Infrastructure
             builder.RegisterType<SHAEncryptionService>()
                 .As<IEncryptionService>()
                 .InstancePerHttpRequest();
+
+            builder.RegisterType<JsonSerializerService>()
+                .As<IJsonSerializerService>()
+                .InstancePerHttpRequest();
         }
     }
 }
