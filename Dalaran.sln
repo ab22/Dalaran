@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dalaran.DAL", "Dalaran.DAL\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dalaran.Services", "Dalaran.Services\Dalaran.Services.csproj", "{4BA6F2C5-CBE5-416B-B2E7-DF124B6B5BB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dalaran.UnitTests", "Dalaran.UnitTests\Dalaran.UnitTests.csproj", "{98179B4F-1A50-4A23-90F8-687E7FA122DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4BA6F2C5-CBE5-416B-B2E7-DF124B6B5BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BA6F2C5-CBE5-416B-B2E7-DF124B6B5BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BA6F2C5-CBE5-416B-B2E7-DF124B6B5BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98179B4F-1A50-4A23-90F8-687E7FA122DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98179B4F-1A50-4A23-90F8-687E7FA122DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98179B4F-1A50-4A23-90F8-687E7FA122DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98179B4F-1A50-4A23-90F8-687E7FA122DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

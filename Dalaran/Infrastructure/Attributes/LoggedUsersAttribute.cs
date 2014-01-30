@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 
-namespace Dalaran.Infrastructure.CustomAttributes
+namespace Dalaran.Infrastructure.Attributes
 {
     public class LoggedUsersAttribute : AuthorizeAttribute
     {

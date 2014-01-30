@@ -174,7 +174,7 @@
     </Compile>
     <Compile Include="Infrastructure\AutoFacDependencyInjection.cs" />
     <Compile Include="Infrastructure\AutoMapperWebConfiguration.cs" />
-    <Compile Include="Infrastructure\CustomAttributes\LoggedUsersAttribute.cs" />
+    <Compile Include="Infrastructure\Attributes\LoggedUsersAttribute.cs" />
     <Compile Include="Infrastructure\DalaranBootsrapper.cs" />
     <Compile Include="Infrastructure\Enumerations\AccountState.cs" />
     <Compile Include="Infrastructure\Interfaces\IBaseBootstrapper.cs" />

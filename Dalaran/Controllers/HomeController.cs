@@ -1,6 +1,6 @@
 ﻿using Dalaran.DAL;
 using Dalaran.DAL.Interfaces;
-using Dalaran.Infrastructure.CustomAttributes;
+using Dalaran.Infrastructure.Attributes;
 using Dalaran.Infrastructure.Enumerations;
 using Dalaran.Models;
 using Dalaran.Services.Interfaces;
@@ -9,6 +9,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace Dalaran.Controllers
 {
@@ -29,6 +31,24 @@ namespace Dalaran.Controllers
         }
         public ActionResult Index()
         {
+            var userList = new List<string>();
+            var navigationProperties = new List<Expression<Func<Users, object>>>()
+            {
+                x => x.Cities.States.Countries
+            };
+
+            var users = _repository.Select<Users>(
+                u => u.Cities.States.Countries.CountryId == 1,
+                navigationProperties.AsQueryable()
+                );
+
+            foreach (var u in users)
+            {
+                userList.Add( String.Format("{0} - {1} - {2}", u.Name, u.Lastname, u.Cities.Name) );
+            }
+
+            ViewBag.UserList = userList;
+
             return View();
         }
 
