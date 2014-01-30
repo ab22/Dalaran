@@ -181,6 +181,7 @@
     <Compile Include="Infrastructure\Interfaces\IGlobalConfiguration.cs" />
     <Compile Include="Infrastructure\WebConfiguration.cs" />
     <Compile Include="Models\UserCookieModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

@@ -1,8 +1,9 @@
 ﻿
+using Autofac;
 namespace Dalaran.Infrastructure.Interfaces
 {
     public interface IBaseBootstrapper
     {
-        void Run();
+        ILifetimeScope Run();
     }
 }

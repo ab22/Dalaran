@@ -25,27 +25,21 @@ namespace Dalaran.Infrastructure
             builder.RegisterControllers( typeof(MvcApplication).Assembly );
 
             RegisterServices();
-            var container = builder.Build();
-            DependencyResolver.SetResolver( new AutofacDependencyResolver(container) );
         }
 
         private void RegisterServices()
         {
             builder.RegisterType<DalaranEntities>()
-                .As<DbContext>()
-                .InstancePerHttpRequest();
+                .As<DbContext>();
 
             builder.Register(c => new MysqlRepository(c.Resolve<DbContext>()))
-                .As<IDataRepository>()
-                .InstancePerHttpRequest();
+                .As<IDataRepository>();
 
             builder.RegisterType<SHAEncryptionService>()
-                .As<IEncryptionService>()
-                .InstancePerHttpRequest();
+                .As<IEncryptionService>();
 
             builder.RegisterType<JsonSerializerService>()
-                .As<IJsonSerializerService>()
-                .InstancePerHttpRequest();
+                .As<IJsonSerializerService>();
         }
     }
 }

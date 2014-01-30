@@ -11,14 +11,15 @@ using System.Web.Mvc;
 using System.Web.Security;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using AutoMapper;
 
 namespace Dalaran.Controllers
 {
     public class HomeController : Controller
     {
-        private IDataRepository _repository;
-        private IEncryptionService _encryptionService;
-        private IJsonSerializerService _jsonSerializer;
+        private readonly IDataRepository _repository;
+        private readonly IEncryptionService _encryptionService;
+        private readonly IJsonSerializerService _jsonSerializer;
         public HomeController( 
             IDataRepository repository,
             IEncryptionService encryptionService,
@@ -98,6 +99,23 @@ namespace Dalaran.Controllers
             HttpCookie sessionAuthCookie = new HttpCookie("ASP.NET_SessionId", "");
             sessionAuthCookie.Expires = DateTime.Now.AddYears(-1);
             Response.Cookies.Add(sessionAuthCookie);
+        }
+
+        [HttpPost]
+        public JsonResult GetUsers()
+        {
+            var users = _repository.Select<Users>
+                (
+                    u => u.Cities.States.Countries.CountryId == 1
+                );
+
+            var result = Mapper.Map<IEnumerable<Users>, List<Models.UserModel>>(users);
+
+            return Json
+                (   
+                    result,
+                    JsonRequestBehavior.DenyGet
+                );
         }
 
         void CreateUser()
