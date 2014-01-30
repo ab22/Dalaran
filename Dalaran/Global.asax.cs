@@ -15,8 +15,6 @@ namespace Dalaran
         {
             DalaranBootstrapper bootstrapper = new DalaranBootstrapper(new ContainerBuilder());
             bootstrapper.Run();
-
-            log.Info("Application Started!");
         }
 
         protected void Application_Error(object sender, EventArgs e)
