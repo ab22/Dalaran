@@ -9,7 +9,7 @@ namespace Dalaran.Infrastructure
     {
         public void Configure()
         {
-            AreaRegistration.RegisterAllAreas();
+            //AreaRegistration.RegisterAllAreas();
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
