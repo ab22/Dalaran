@@ -17,7 +17,7 @@ namespace Dalaran.Infrastructure.Attributes
 
             try
             {
-                string userData = FormsAuthentication.Decrypt(cookie.Value).UserData;
+                var userData = FormsAuthentication.Decrypt(cookie.Value).UserData;
             }catch(ArgumentException){
                 return false;
             }
@@ -36,7 +36,7 @@ namespace Dalaran.Infrastructure.Attributes
                 
             try
             {
-                string userData = FormsAuthentication.Decrypt(cookie.Value).UserData;
+                var userData = FormsAuthentication.Decrypt(cookie.Value).UserData;
             }catch(ArgumentException){
                 filterContext.HttpContext.Response.SuppressFormsAuthenticationRedirect = true;
                 filterContext.Result = new HttpStatusCodeResult(401);
