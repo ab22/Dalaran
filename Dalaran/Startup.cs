@@ -1,6 +1,4 @@
-﻿using Microsoft.Owin;
-using Owin;
-using log4net;
+﻿using Owin;
 
 namespace Dalaran
 {

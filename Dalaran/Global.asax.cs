@@ -7,13 +7,13 @@ using System.Web;
 
 namespace Dalaran
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : HttpApplication
     {
         private readonly ILog log = LogManager.GetLogger( MethodBase.GetCurrentMethod().DeclaringType );
 
         protected void Application_Start()
         {
-            DalaranBootstrapper bootstrapper = new DalaranBootstrapper(new ContainerBuilder());
+            var bootstrapper = new DalaranBootstrapper(new ContainerBuilder());
             bootstrapper.Run();
         }
 
@@ -29,10 +29,10 @@ namespace Dalaran
                     return;
                 }
             }
-            string message = String.Format("{0} - {1}@{2}\n{3}",
-                ex.Message,
+            var message = String.Format("[{0}@{1}] {2}\n{3}",
                 "Application_Error",
                 "Global.asax.cs",
+                ex.Message,
                 ex.StackTrace
                 );
 
