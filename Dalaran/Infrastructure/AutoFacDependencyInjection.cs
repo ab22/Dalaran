@@ -7,7 +7,6 @@ using Dalaran.Infrastructure.Interfaces;
 using Dalaran.Services;
 using Dalaran.Services.Interfaces;
 using System.Data.Entity;
-using System.Web.Mvc;
 
 namespace Dalaran.Infrastructure
 {

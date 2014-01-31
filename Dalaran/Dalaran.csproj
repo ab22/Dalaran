@@ -237,7 +237,6 @@
     <Content Include="Scripts\website\theme.js" />
     <Content Include="Scripts\website\theme.min.js" />
     <Content Include="weyland-config.js" />
-    <Content Include="readme.md" />
     <Content Include="Content\fonts\icomoon.eot" />
     <Content Include="Content\fonts\icomoon.ttf" />
     <Content Include="Content\fonts\icomoon.woff" />
@@ -288,7 +287,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dalaran.DAL\Dalaran.DAL.csproj">

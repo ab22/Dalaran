@@ -9,7 +9,6 @@
 
 namespace Dalaran.DAL
 {
-    using System;
     using System.Collections.Generic;
     using Dalaran.DAL.Interfaces;
     public partial class Countries : IEntity
