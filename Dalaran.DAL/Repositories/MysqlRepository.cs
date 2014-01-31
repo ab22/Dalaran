@@ -9,9 +9,9 @@ using System.Linq.Expressions;
 
 namespace Dalaran.DAL.Repositories
 {
-    public class MysqlRepository : Interfaces.IDataRepository
+    public class MysqlRepository : IDataRepository
     {
-        private DbContext context;
+        private readonly DbContext context;
 
         public MysqlRepository(DbContext context)
         {
@@ -27,7 +27,7 @@ namespace Dalaran.DAL.Repositories
             { 
                 foreach (Expression<Func<T, object>> property in navigationProperties)
                 {
-                    iQuery = iQuery.Include<T, object>(property);
+                    iQuery = iQuery.Include(property);
                 }
             }
 
