@@ -1,6 +1,5 @@
 ﻿using Dalaran.DAL;
 using Dalaran.DAL.Interfaces;
-using Dalaran.Infrastructure.Attributes;
 using Dalaran.Infrastructure.Enumerations;
 using Dalaran.Models;
 using Dalaran.Services.Interfaces;
@@ -12,6 +11,7 @@ using System.Web.Security;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using AutoMapper;
+using WebGrease.Css.Extensions;
 
 namespace Dalaran.Controllers
 {
@@ -26,27 +26,32 @@ namespace Dalaran.Controllers
             IJsonSerializerService jsonSerializer
             )
         {
-            this._repository = repository;
-            this._encryptionService = encryptionService;
-            this._jsonSerializer = jsonSerializer;
+            _repository = repository;
+            _encryptionService = encryptionService;
+            _jsonSerializer = jsonSerializer;
         }
         public ActionResult Index()
         {
-            var userList = new List<string>();
-            var navigationProperties = new List<Expression<Func<Users, object>>>()
+            var navigationProperties = new List<Expression<Func<Users, object>>>
             {
                 x => x.Cities.States.Countries
             };
 
-            var users = _repository.Select<Users>(
+            var users = _repository.Select(
                 u => u.Cities.States.Countries.CountryId == 1,
                 navigationProperties.AsQueryable()
                 );
 
-            foreach (var u in users)
-            {
-                userList.Add( String.Format("{0} - {1} - {2}", u.Name, u.Lastname, u.Cities.Name) );
-            }
+            var userList = new List<String>();
+            users.ForEach
+                (u =>
+                    {
+                        if (true)
+                        {
+                            userList.Add(String.Format("{0} - {1} - {2}", u.Name, u.Lastname, u.Cities.Name));
+                        }
+                    }
+                );
 
             ViewBag.UserList = userList;
 
@@ -54,7 +59,7 @@ namespace Dalaran.Controllers
         }
 
         [HttpPost]
-        public JsonResult Login(string Email, string Password)
+        public JsonResult Login(string email, string password)
         {
             //if( database.users.matches(email, password){
             //this.StartSession(0, Email);
@@ -62,16 +67,16 @@ namespace Dalaran.Controllers
             return Json( "Done" , JsonRequestBehavior.DenyGet);
         }
 
-        private void StartSession(int UserId, string Email)
+        private void StartSession(int userId, string email)
         {
             string  userData = _jsonSerializer.Serialize(
                 new UserCookieModel { 
-                    UserId = UserId,
-                    Email = Email
+                    UserId = userId,
+                    Email = email
                 }
             );
 
-            var ticket = new FormsAuthenticationTicket(1, Email, DateTime.Now, DateTime.Now.AddMinutes(30), false, userData );
+            var ticket = new FormsAuthenticationTicket(1, email, DateTime.Now, DateTime.Now.AddMinutes(30), false, userData );
             string encryptedTicket = FormsAuthentication.Encrypt(ticket);
 
             Response.Cookies.Add(
@@ -82,7 +87,7 @@ namespace Dalaran.Controllers
         [HttpPost]
         public JsonResult Logout()
         {
-            this.EndSession();
+            EndSession();
 
             return Json("", JsonRequestBehavior.DenyGet);
         }
@@ -92,12 +97,16 @@ namespace Dalaran.Controllers
             Session.Abandon();
             FormsAuthentication.SignOut();
 
-            HttpCookie formsAuthCookie = new HttpCookie(FormsAuthentication.FormsCookieName, "");
-            formsAuthCookie.Expires = DateTime.Now.AddYears(-1);
+            var formsAuthCookie = new HttpCookie(FormsAuthentication.FormsCookieName, "")
+            {
+                Expires = DateTime.Now.AddYears(-1)
+            };
             Response.Cookies.Add(formsAuthCookie);
 
-            HttpCookie sessionAuthCookie = new HttpCookie("ASP.NET_SessionId", "");
-            sessionAuthCookie.Expires = DateTime.Now.AddYears(-1);
+            var sessionAuthCookie = new HttpCookie("ASP.NET_SessionId", "")
+            {
+                Expires = DateTime.Now.AddYears(-1)
+            };
             Response.Cookies.Add(sessionAuthCookie);
         }
 
@@ -109,7 +118,7 @@ namespace Dalaran.Controllers
                     u => u.Cities.States.Countries.CountryId == 1
                 );
 
-            var result = Mapper.Map<IEnumerable<Users>, List<Models.UserModel>>(users);
+            var result = Mapper.Map<IEnumerable<Users>, List<UserModel>>(users);
 
             return Json
                 (   
@@ -120,17 +129,19 @@ namespace Dalaran.Controllers
 
         void CreateUser()
         {
-            Cities c = _repository.Select<Cities>(x => x.CityId == 2).FirstOrDefault();
-            Users myUser = new Users();
-            myUser.AccountState = (int)AccountState.NotValidated;
-            myUser.Address = "6 y 7 calle, 4ta ave., bo. El Centro.";
-            myUser.CityId = c.CityId;
-            myUser.DOB = new DateTime(1990, 9, 22);
-            myUser.Email = "abelardo22.9@gmail.com";
-            myUser.Lastname = "Mendoza";
-            myUser.Name = "Abelardo";
+            var c = _repository.Select<Cities>(x => x.CityId == 2).FirstOrDefault();
+            var myUser = new Users
+            {
+                AccountState = (int) AccountState.NotValidated,
+                Address = "address",
+                CityId = c.CityId,
+                DOB = new DateTime(1990, 9, 22),
+                Email = "email@gmail.com",
+                Lastname = "Lastname",
+                Name = "Firstname",
+                PasswordSalt = _encryptionService.GenerateSalt()
+            };
 
-            myUser.PasswordSalt = _encryptionService.GenerateSalt();
             myUser.Password = _encryptionService.Encrypt("1234", myUser.PasswordSalt);
 
             myUser.Rating = 0;
