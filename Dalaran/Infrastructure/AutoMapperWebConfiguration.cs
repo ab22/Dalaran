@@ -1,4 +1,5 @@
-﻿using Dalaran.Infrastructure.Interfaces;
+﻿using Dalaran.DAL.Entities;
+using Dalaran.Infrastructure.Interfaces;
 using AutoMapper;
 using Dalaran.DAL;
 using Dalaran.Models;
@@ -15,7 +16,7 @@ namespace Dalaran.Infrastructure
              *      Mapper.CreateMap<Products, SearchProductModel>();
              * 
              * */
-            Mapper.CreateMap<Users,UserModel>();
+            Mapper.CreateMap<User,UserModel>();
         }
     }
 }
