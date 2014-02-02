@@ -28,7 +28,7 @@ namespace Dalaran.Infrastructure
 
         private void RegisterServices()
         {
-            builder.RegisterType<DalaranEntities>()
+            builder.RegisterType<DalaranContext>()
                 .As<DbContext>();
 
             builder.Register(c => new MysqlRepository(c.Resolve<DbContext>()))
