@@ -1,16 +1,17 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Transactions;
+﻿using System.Linq;
 using Autofac;
 using Dalaran.Controllers;
-using Dalaran.DAL;
+using Dalaran.DAL.Entities;
 using Dalaran.DAL.Interfaces;
 using Dalaran.Infrastructure;
 using Dalaran.Models;
-using Machine.Specifications;
-using It = Machine.Specifications.It;
-using Dalaran.Services.Casting;
+using Dalaran.Services.CastingExtensions;
 using FizzWare.NBuilder;
+using Machine.Specifications;
+using System.Collections.Generic;
+using System.Transactions;
+using It = Machine.Specifications.It;
+
 namespace Dalaran.UnitTests
 {
     [Subject("User Retrieval")]
@@ -21,7 +22,7 @@ namespace Dalaran.UnitTests
         private static List<UserModel> _result;
         private static TransactionScope _transactionScope;
         private static IDataRepository _repository;
-        private static Users _user;
+        private static User _user;
         private static string _testEmail = "test@test.com";
         Establish context = 
             () =>
@@ -31,7 +32,7 @@ namespace Dalaran.UnitTests
                 _controller = container.Resolve<HomeController>();
                 _repository = container.Resolve<IDataRepository>();
 
-                _user = Builder<Users>.CreateNew()
+                _user = Builder<User>.CreateNew()
                     .With(x => x.UserId = 22)
                     .With(x => x.Email = _testEmail)
                     .Build();
@@ -44,7 +45,7 @@ namespace Dalaran.UnitTests
             () => _result.Count.ShouldBeGreaterThan(0);
 
         It should_select_one_user =
-            () => _repository.Select<Users>(x => x.UserId == _user.UserId).FirstOrDefault().Email.ShouldEqual(_testEmail);
+            () => _repository.Select<User>(x => x.UserId == _user.UserId).FirstOrDefault().Email.ShouldEqual(_testEmail);
 
         private Cleanup after =
             () => _transactionScope.Dispose();

@@ -1,4 +1,5 @@
 ﻿using Dalaran.DAL;
+using Dalaran.DAL.Entities;
 using Dalaran.DAL.Interfaces;
 using Dalaran.Infrastructure.Enumerations;
 using Dalaran.Models;
@@ -32,28 +33,21 @@ namespace Dalaran.Controllers
         }
         public ActionResult Index()
         {
-            var navigationProperties = new List<Expression<Func<Users, object>>>
-            {
-                x => x.Cities.States.Countries
-            };
-
-            var users = _repository.Select(
-                u => u.Cities.States.Countries.CountryId == 1,
-                navigationProperties.AsQueryable()
+            var list = new List<String>();
+            var navProperties = new List<Expression<Func<City, object>>> {x => x.State.Country};
+            var countries = _repository.Select<City>(
+                x => true,
+                navProperties.AsQueryable()
                 );
+            
+            countries.ForEach(
+                x => 
+                     list.Add(
+                        String.Format("City {2} is in State {1} which is in country {0}", x.State.Country.Name, x.State.Name, x.Name)
+                     )
+                    );
 
-            var userList = new List<String>();
-            users.ForEach
-                (u =>
-                    {
-                        if (true)
-                        {
-                            userList.Add(String.Format("{0} - {1} - {2}", u.Name, u.Lastname, u.Cities.Name));
-                        }
-                    }
-                );
-
-            ViewBag.UserList = userList;
+            ViewBag.Countries = list;
 
             return View();
         }
@@ -113,12 +107,12 @@ namespace Dalaran.Controllers
         [HttpPost]
         public JsonResult GetUsers()
         {
-            var users = _repository.Select<Users>
+            var users = _repository.Select<User>
                 (
-                    u => u.Cities.States.Countries.CountryId == 1
+                    u => u.City.State.Country.CountryId == 1
                 );
 
-            var result = Mapper.Map<IEnumerable<Users>, List<UserModel>>(users);
+            var result = Mapper.Map<IEnumerable<User>, List<UserModel>>(users);
 
             return Json
                 (   
@@ -129,13 +123,13 @@ namespace Dalaran.Controllers
 
         void CreateUser()
         {
-            var c = _repository.Select<Cities>(x => x.CityId == 2).FirstOrDefault();
-            var myUser = new Users
+            var c = _repository.Select<City>(x => x.CityId == 2).FirstOrDefault();
+            var myUser = new User
             {
                 AccountState = (int) AccountState.NotValidated,
                 Address = "address",
                 CityId = c.CityId,
-                DOB = new DateTime(1990, 9, 22),
+                DoB = new DateTime(1990, 9, 22),
                 Email = "email@gmail.com",
                 Lastname = "Lastname",
                 Name = "Firstname",
@@ -147,7 +141,7 @@ namespace Dalaran.Controllers
             myUser.Rating = 0;
             myUser.RegisterDate = DateTime.Now;
 
-            _repository.Create<Users>(myUser);
+            _repository.Create<User>(myUser);
         }
     }
 }

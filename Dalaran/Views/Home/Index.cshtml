@@ -11,9 +11,15 @@
     @Scripts.Render("~/Scripts/vendor")
     <script type="text/javascript" src="~/Scripts/require.js" data-main="/App/main"></script>
 </head>
-<body style="font-family: open_sanslight !important" class="home page page-id-17 page-parent page-template page-template-page-blank-php antialiased sticky_header breadcrumb-normal">
-    <div id="applicationHost">
+    <body style="font-family: open_sanslight !important" class="home page page-id-17 page-parent page-template page-template-page-blank-php antialiased sticky_header breadcrumb-normal">
+        @{
+            foreach (var s in ViewBag.Countries)
+            {
+                Response.Write(s + "<br />");
+            }
+        }
+        <div id="applicationHost">
 
-    </div>
-</body>
+        </div>
+    </body>
 </html>
