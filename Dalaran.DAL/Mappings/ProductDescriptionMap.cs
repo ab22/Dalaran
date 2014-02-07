@@ -1,4 +1,5 @@
-﻿using Dalaran.DAL.Entities;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Dalaran.DAL.Entities;
 using System.Data.Entity.ModelConfiguration;
 
 namespace Dalaran.DAL.Mappings
@@ -10,18 +11,20 @@ namespace Dalaran.DAL.Mappings
             //Table
             this.ToTable("ProductDescriptions");
 
-            //Columns
-            this.Property(x => x.ProductDescriptionId).HasColumnName("ProductDescriptionId");
-            this.Property(x => x.ProductId).HasColumnName("ProductId");
-            this.Property(x => x.ProductDescriptionTypeId).HasColumnName("ProductDescriptionTypeId");
-            this.Property(x => x.Description).HasColumnName("Description");
+            //Columns & Properties
+            this.Property(x => x.ProductDescriptionId)
+                .HasColumnName("ProductDescriptionId")
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            this.Property(x => x.ProductId)
+                .HasColumnName("ProductId");
+            this.Property(x => x.ProductDescriptionTypeId)
+                .HasColumnName("ProductDescriptionTypeId");
+            this.Property(x => x.Description)
+                .HasColumnName("Description")
+                .HasMaxLength(60);
 
             //PK
             this.HasKey(x => x.ProductDescriptionId);
-
-            //Properties
-            this.Property(x => x.Description)
-                .HasMaxLength(60);
 
             //Relationships
             this.HasRequired(x => x.ProductDescriptionType)
