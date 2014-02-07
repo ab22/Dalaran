@@ -33,7 +33,7 @@ namespace Dalaran.Controllers
         }
         public ActionResult Index()
         {
-            var list = new List<String>();
+            /*var list = new List<String>();
             var navProperties = new List<Expression<Func<City, object>>> {x => x.State.Country};
             var countries = _repository.Select<City>(
                 x => true,
@@ -47,7 +47,7 @@ namespace Dalaran.Controllers
                      )
                     );
 
-            ViewBag.Countries = list;
+            ViewBag.Countries = list;*/
 
             return View();
         }

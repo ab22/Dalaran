@@ -80,6 +80,8 @@
     <Compile Include="Mappings\StateMap.cs" />
     <Compile Include="Mappings\SubCategoryMap.cs" />
     <Compile Include="Mappings\UserMap.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\MySqlGenerator.cs" />
     <Compile Include="Repositories\MysqlRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
