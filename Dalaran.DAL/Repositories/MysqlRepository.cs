@@ -16,7 +16,7 @@ namespace Dalaran.DAL.Repositories
         public MysqlRepository(DbContext context)
         {
             this.context = context;
-            //context.Configuration.LazyLoadingEnabled = false;
+            context.Configuration.LazyLoadingEnabled = false;
         }
 
         public IQueryable<T> Select<T>( Expression<Func<T, bool>> query, IQueryable<Expression<Func<T, object>>> navigationProperties = null) where T : class, IEntity 

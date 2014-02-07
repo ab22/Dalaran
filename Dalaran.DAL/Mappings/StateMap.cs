@@ -12,18 +12,17 @@ namespace Dalaran.DAL.Mappings
             this.ToTable("States");
 
             //Columns
-            this.Property(x => x.StateId).HasColumnName("StateId");
-            this.Property(x => x.Name).HasColumnName("Name");
-            this.Property(x => x.CountryId).HasColumnName("CountryId");
+            this.Property(x => x.StateId)
+                .HasColumnName("StateId")
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            this.Property(x => x.Name)
+                .HasColumnName("Name")
+                .HasMaxLength(45);
+            this.Property(x => x.CountryId)
+                .HasColumnName("CountryId");
 
             //PK
             this.HasKey(x => x.StateId);
-
-            //Properties
-            this.Property(x => x.StateId)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(x => x.Name)
-                .HasMaxLength(45);
 
             //Relationships
             this.HasRequired(x => x.Country)

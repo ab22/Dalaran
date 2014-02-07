@@ -19,7 +19,9 @@ namespace Dalaran.DAL.Entities
         public string Upc { get; set; }
         public string Condition { get; set; }
         public int UserId { get; set; }
+        public int SubCategoryId { get; set; }
 
+        public virtual SubCategory SubCategory { get; set; }
         public virtual User User { get; set; }
         public virtual ICollection<ProductDescription> ProductDescriptions { get; set; }
     }
