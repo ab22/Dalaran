@@ -11,16 +11,16 @@ namespace Dalaran.DAL.Mappings
             //Table
             this.ToTable("ProductDescriptionTypes");
 
-            //Columns
-            this.Property(x => x.ProductDescriptionTypeId).HasColumnName("ProductDescriptionTypeId");
-            this.Property(x => x.Description).HasColumnName("Description");
+            //Columns & Properties
+            this.Property(x => x.ProductDescriptionTypeId)
+                .HasColumnName("ProductDescriptionTypeId")
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            this.Property(x => x.Description)
+                .HasColumnName("Description")
+                .HasMaxLength(60);
 
             //PK
             this.HasKey(x => x.ProductDescriptionTypeId);
-
-            //Properties
-            this.Property(x => x.Description)
-                .HasMaxLength(60);
         }
     }
 }

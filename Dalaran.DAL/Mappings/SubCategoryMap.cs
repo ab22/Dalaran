@@ -25,10 +25,6 @@ namespace Dalaran.DAL.Mappings
             //PK
             this.HasKey(x => x.SubCategoryId);
 
-            //Properties
-            this.Property(x => x.Name)
-                .HasMaxLength(45);
-
             //Relationships
             this.HasRequired(x => x.Category)
                 .WithMany(x => x.SubCategories)

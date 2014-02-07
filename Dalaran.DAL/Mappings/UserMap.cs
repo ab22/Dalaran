@@ -12,31 +12,23 @@ namespace Dalaran.DAL.Mappings
             this.ToTable("Users");
 
             //Columns
-            this.Property(x => x.UserId).HasColumnName("UserId");
-            this.Property(x => x.Name).HasColumnName("Name");
-            this.Property(x => x.LastName).HasColumnName("LastName");
-            this.Property(x => x.DoB).HasColumnName("DOB");
-            this.Property(x => x.Address).HasColumnName("Address");
-            this.Property(x => x.Email).HasColumnName("Email");
-            this.Property(x => x.Password).HasColumnName("Password");
-            this.Property(x => x.PasswordSalt).HasColumnName("PasswordSalt");
-            this.Property(x => x.RegisterDate).HasColumnName("RegisterDate");
-            this.Property(x => x.Rating).HasColumnName("Rating");
-            this.Property(x => x.CityId).HasColumnName("CityId");
-            this.Property(x => x.AccountState).HasColumnName("AccountState");
-
-            //PK
-            this.HasKey(x => x.UserId);
-
-            //Properties
+            this.Property(x => x.UserId)
+                .HasColumnName("UserId")
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+                .HasColumnName("Address")
+            this.Property(x => x.Name)
+                .HasColumnName("Name")
+                .HasMaxLength(45);
+            this.Property(x => x.LastName)
+                .HasColumnName("LastName")
+                .HasMaxLength(45);
+            this.Property(x => x.DoB)
+                .HasColumnName("DOB");
             this.Property(x => x.Address)
                 .HasColumnName("Address")
                 .HasMaxLength(45);
             this.Property(x => x.Email)
-                .HasMaxLength(45);
-            this.Property(x => x.Name)
-                .HasMaxLength(45);
-            this.Property(x => x.LastName)
+                .HasColumnName("Email")
                 .HasMaxLength(45);
             this.Property(x => x.Password)
                 .HasColumnName("Password")

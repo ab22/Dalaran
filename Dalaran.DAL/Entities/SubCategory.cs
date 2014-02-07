@@ -6,11 +6,6 @@ namespace Dalaran.DAL.Entities
 {
     public partial class SubCategory : IEntity
     {
-        public SubCategory()
-        {
-
-        }
-
         public int SubCategoryId { get; set; }
         public string Name { get; set; }
         public int CategoryId { get; set; }

@@ -11,21 +11,12 @@ namespace Dalaran.DAL.Mappings
             //Table
             this.ToTable("Products");
 
-            //Columns
-            this.Property(x => x.ProductId).HasColumnName("ProductId");
-            this.Property(x => x.Name).HasColumnName("Name");
-            this.Property(x => x.Description).HasColumnName("Description");
-            this.Property(x => x.Price).HasColumnName("Price");
-            this.Property(x => x.Manufacturer).HasColumnName("Manufacturer");
-            this.Property(x => x.Model).HasColumnName("Model");
-            this.Property(x => x.Upc).HasColumnName("UPC");
-            this.Property(x => x.Condition).HasColumnName("Condition");
-
-            //PK
-            this.HasKey(x => x.ProductId);
-
-            //Properties
-            this.Property(x => x.Condition)
+            //Columns & Properties
+            this.Property(x => x.ProductId)
+                .HasColumnName("ProductId")
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            this.Property(x => x.Name)
+                .HasColumnName("Name")
                 .HasMaxLength(45);
             this.Property(x => x.Description)
                 .HasColumnName("Description")

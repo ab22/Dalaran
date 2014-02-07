@@ -21,10 +21,6 @@ namespace Dalaran.DAL.Mappings
 
             //PK
             this.HasKey(x => x.CategoryId);
-
-            //Properties
-            this.Property(x => x.Name)
-                .HasMaxLength(45);
         }
     }
 }
