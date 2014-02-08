@@ -5,7 +5,7 @@
         activate = function () {
             router.map([
                 { route: '', title: 'Home', moduleId: 'viewmodels/home' },
-                { route: 'login', moduleId: 'viewmodels/login/login' }
+                { route: 'login/login', moduleId: 'viewmodels/login/login' }
             ]);
             return router.activate();
         };
