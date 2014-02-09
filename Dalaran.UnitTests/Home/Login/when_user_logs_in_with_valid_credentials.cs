@@ -78,22 +78,20 @@ namespace Dalaran.UnitTests.Home
             () => _result = HomeController.Login(_userEmail, _userPassword);
 
         It should_return_json_result =
-            () =>
-            {
-                var result = JsonSerializerService.DeSerialize<LoginResultModel>(_result.Data.ToString());
-                result.ShouldBeLike(_expectedLoginResultModel);
-            };
+            () => _expectedLoginResultModel.ShouldBeLike(
+                                                JsonSerializerService.DeSerialize<LoginResultModel>(_result.Data.ToString())
+                                             );
 
         It should_set_a_valid_forms_authentication_cookie =
             () =>
             {
                 var cookie = ResponseCookieCollection[FormsAuthentication.FormsCookieName];
-                cookie.ShouldNotBeNull();
-
-                var authenticationTicket = FormsAuthentication.Decrypt(cookie.Value);
-                authenticationTicket.ShouldNotBeNull();
-
-                var userCookieModel = JsonSerializerService.DeSerialize<UserCookieModel>(authenticationTicket.UserData);
+                var authenticationTicket = FormsAuthentication.Decrypt(
+                                                cookie.Value
+                                            );
+                var userCookieModel = JsonSerializerService.DeSerialize<UserCookieModel>(
+                                                                authenticationTicket.UserData
+                                                            );
                 userCookieModel.ShouldBeLike(_expectedUserCookieModel);
             };
     }
