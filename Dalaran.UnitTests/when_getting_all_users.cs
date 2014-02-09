@@ -31,7 +31,6 @@ namespace Dalaran.UnitTests
                 _transactionScope = new TransactionScope();
                 _controller = container.Resolve<HomeController>();
                 _repository = container.Resolve<IDataRepository>();
-
                 _user = Builder<User>.CreateNew()
                     .With(x => x.UserId = 22)
                     .With(x => x.Email = _testEmail)

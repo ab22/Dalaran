@@ -1,4 +1,5 @@
-﻿using Autofac;
+﻿using System.Web.Services.Description;
+using Autofac;
 using Autofac.Integration.Mvc;
 using Dalaran.DAL;
 using Dalaran.DAL.Interfaces;
@@ -39,6 +40,9 @@ namespace Dalaran.Infrastructure
 
             builder.RegisterType<JsonSerializerService>()
                 .As<IJsonSerializerService>();
+
+            builder.RegisterType<MessageProvider>()
+                .As<IMessageProvider>();
         }
     }
 }
