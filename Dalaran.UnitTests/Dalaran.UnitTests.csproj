@@ -139,8 +139,6 @@
     <Compile Include="Home\Login\when_user_logs_in_with_invalid_password.cs" />
     <Compile Include="Home\Login\when_user_logs_in_with_valid_credentials.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
