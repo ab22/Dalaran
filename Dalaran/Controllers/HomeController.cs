@@ -50,9 +50,10 @@ namespace Dalaran.Controllers
 
             var user = _dataRepository.Select<User>(
                 x => x.Email == email
-                ).First();
+                ).FirstOrDefault();
 
-            if (user == null) //Email not found
+            //Email not found
+            if (user == null)
             {
                 string errorMessage = _messageProvider.GetMessage("LOGIN_INVALID_CREDENTIALS");
 
@@ -62,9 +63,10 @@ namespace Dalaran.Controllers
                     Messages = new List<string>() { errorMessage }
                 };
             }
-            else if (!_encryptionService.Compare(user.Password, user.PasswordSalt, password)) //Password doesn't match
+            //Password doesn't match
+            else if (!_encryptionService.Compare(user.Password, user.PasswordSalt, password)) 
             {
-                string errorMessage = _messageProvider.GetMessage("LOGIN_INVALID_CREDENTIALS");
+                string errorMessage = _messageProvider.GetMessage("LOGIN_INVALID_PASSWORD");
 
                 resultModel = new LoginResultModel()
                 {
@@ -72,7 +74,8 @@ namespace Dalaran.Controllers
                     Messages = new List<string>() {errorMessage}
                 };
             }
-            else //Valid credentials
+            //Valid credentials
+            else 
             {
                 resultModel = new LoginResultModel()
                 {
