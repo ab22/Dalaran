@@ -21,6 +21,7 @@ namespace Dalaran.DAL
             modelBuilder.Configurations.Add(new ProductMap());
             modelBuilder.Configurations.Add(new ProductDescriptionMap());
             modelBuilder.Configurations.Add(new ProductDescriptionTypeMap());
+            modelBuilder.Configurations.Add(new ApplicationMessageMap());
 
             base.OnModelCreating(modelBuilder);
         }

@@ -191,6 +191,10 @@
     <Compile Include="Infrastructure\Enumerations\AccountState.cs" />
     <Compile Include="Infrastructure\Interfaces\IBaseBootstrapper.cs" />
     <Compile Include="Infrastructure\Interfaces\IGlobalConfiguration.cs" />
+    <Compile Include="Infrastructure\Interfaces\IMessageProvider.cs" />
+    <Compile Include="Infrastructure\MessageProvider.cs" />
+    <Compile Include="Models\Login\LoginResultModel.cs" />
+    <Compile Include="Models\Operations\OperationResult.cs" />
     <Compile Include="Infrastructure\WebConfiguration.cs" />
     <Compile Include="Models\UserCookieModel.cs" />
     <Compile Include="Models\UserModel.cs" />
@@ -200,10 +204,10 @@
   <ItemGroup>
     <Content Include="App\main.js" />
     <Content Include="App\viewmodels\home.js" />
-    <Content Include="App\viewmodels\login.js" />
+    <Content Include="App\viewmodels\login\login.js" />
     <Content Include="App\viewmodels\shell.js" />
     <Content Include="App\views\home.html" />
-    <Content Include="App\views\login.html" />
+    <Content Include="App\views\login\login.html" />
     <Content Include="App\views\shell.html" />
     <Content Include="Content\animations.css" />
     <Content Include="Content\backgroundsize.htc" />
