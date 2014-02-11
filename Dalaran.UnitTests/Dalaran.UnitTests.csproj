@@ -133,10 +133,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Home\given_that_a_user_wants_to_authenticate.cs" />
-    <Compile Include="Home\when_user_logs_in_with_invalid_email.cs" />
-    <Compile Include="Home\when_user_logs_in_with_invalid_password.cs" />
-    <Compile Include="Home\when_user_logs_in_with_valid_credentials.cs" />
+    <Compile Include="Home\Login\given_that_a_user_wants_to_authenticate.cs" />
+    <Compile Include="Home\Login\when_user_logs_in_with_invalid_email.cs" />
+    <Compile Include="Home\Login\when_user_logs_in_with_invalid_parameters.cs" />
+    <Compile Include="Home\Login\when_user_logs_in_with_invalid_password.cs" />
+    <Compile Include="Home\Login\when_user_logs_in_with_valid_credentials.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -47,47 +47,57 @@ namespace Dalaran.Controllers
         public JsonResult Login(string email, string password)
         {
             LoginResultModel resultModel;
-
-            var user = _dataRepository.Select<User>(
-                x => x.Email == email
-                ).FirstOrDefault();
-
-            //Email not found
-            if (user == null)
+            if (!ModelState.IsValid)
             {
-                string errorMessage = _messageProvider.GetMessage("LOGIN_INVALID_CREDENTIALS");
-
                 resultModel = new LoginResultModel()
                 {
                     Success = false,
-                    Messages = new List<string>() { errorMessage }
+                    Messages = new List<string>() {"Invalid parameters"}
                 };
             }
-            //Password doesn't match
-            else if (!_encryptionService.Compare(user.Password, user.PasswordSalt, password)) 
+            else
             {
-                string errorMessage = _messageProvider.GetMessage("LOGIN_INVALID_PASSWORD");
+                var user = _dataRepository.Select<User>(
+                    x => x.Email == email
+                    ).FirstOrDefault();
 
-                resultModel = new LoginResultModel()
+                //Email not found
+                if (user == null)
                 {
-                    Success = false,
-                    Messages = new List<string>() {errorMessage}
-                };
-            }
-            //Valid credentials
-            else 
-            {
-                resultModel = new LoginResultModel()
+                    string errorMessage = _messageProvider.GetMessage("LOGIN_INVALID_CREDENTIALS");
+
+                    resultModel = new LoginResultModel()
+                    {
+                        Success = false,
+                        Messages = new List<string>() {errorMessage}
+                    };
+                }
+                    //Password doesn't match
+                else if (!_encryptionService.Compare(user.Password, user.PasswordSalt, password))
                 {
-                    Success = true,
-                    Name = user.Name,
-                    LastName = user.LastName
-                };
+                    string errorMessage = _messageProvider.GetMessage("LOGIN_INVALID_PASSWORD");
 
-                StartSession(user.UserId, user.Email);
+                    resultModel = new LoginResultModel()
+                    {
+                        Success = false,
+                        Messages = new List<string>() {errorMessage}
+                    };
+                }
+                    //Valid credentials
+                else
+                {
+                    resultModel = new LoginResultModel()
+                    {
+                        Success = true,
+                        Name = user.Name,
+                        LastName = user.LastName
+                    };
+
+                    StartSession(user.UserId, user.Email);
+                }
             }
 
-            string jsonResult = _jsonSerializer.Serialize(resultModel);
+            var jsonResult = _jsonSerializer.Serialize(resultModel);
             return Json(jsonResult, JsonRequestBehavior.DenyGet);
         }
 
