@@ -1,30 +1,30 @@
 Dalaran
 ========
 
-MVC5 test project to practice and learn about:
--TDD
--Dependency injection
--MVC5 as a web api 
--Frontend MVVM (other than angular)
+MVC5 test project to practice and learn about:  <br />
+-TDD <br />
+-Dependency injection  <br />
+-MVC5 as a web api  <br />
+-Frontend MVVM (other than angular)  <br />
 
-Packages worth mentioning of this proj:
--Backend:
---MVC5
---Autofac (Dependency Injection)
---Automapper
---Machine.Specifications (Testing and specs)
---Moq (Mocks)
---NBuilder (Test object generation)
+Packages worth mentioning of this proj:  <br />
+-Backend:  <br />
+--MVC5  <br />
+--Autofac (Dependency Injection)  <br />
+--Automapper  <br />
+--Machine.Specifications (Testing and specs)  <br />
+--Moq (Mocks)  <br />
+--NBuilder (Test object generation)  <br />
 
--Frontend:
---Durandaljs(frontend MVVM js framework)
+-Frontend:  <br />
+--Durandaljs(frontend MVVM js framework)  <br />
 
 
 Web template: http://flatsome.uxthemes.com/ 
 
-Useful links:
--KnockoutJs (Tutorial): http://learn.knockoutjs.com/
--DurandalJs (Docs, examples, etc): http://durandaljs.com/
--Machine Specifications: https://github.com/machine/machine.specifications
--NBuilder: https://code.google.com/p/nbuilder/
--Autofac: https://github.com/autofac/Autofac
+Useful links:  <br />
+-KnockoutJs (Tutorial): http://learn.knockoutjs.com/  <br />
+-DurandalJs (Docs, examples, etc): http://durandaljs.com/  <br />
+-Machine Specifications: https://github.com/machine/machine.specifications  <br />
+-NBuilder: https://code.google.com/p/nbuilder/  <br />
+-Autofac: https://github.com/autofac/Autofac  <br />
