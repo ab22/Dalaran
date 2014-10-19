@@ -1,16 +1,30 @@
-Dalaran Repository
+Dalaran
 ========
 
-Diseño web utilizado: http://flatsome.uxthemes.com/ 
--Convertido de Wordpress a HTML5
+MVC5 test project to practice and learn about:
+-TDD
+-Dependency injection
+-MVC5 as a web api 
+-Frontend MVVM (other than angular)
 
-Página de Trello: https://trello.com/b/IRxKBwxJ/proyecto-x
+Packages worth mentioning of this proj:
+-Backend:
+--MVC5
+--Autofac (Dependency Injection)
+--Automapper
+--Machine.Specifications (Testing and specs)
+--Moq (Mocks)
+--NBuilder (Test object generation)
 
-IP del Servidor: 190.4.47.20
--Puerto para accesar a la página web: 8080
--Puerto para accesar a MySQL: 3306
+-Frontend:
+--Durandaljs(frontend MVVM js framework)
 
-Otros links:
+
+Web template: http://flatsome.uxthemes.com/ 
+
+Useful links:
 -KnockoutJs (Tutorial): http://learn.knockoutjs.com/
--Como crear un producto en Amazon: http://www.youtube.com/watch?v=jQwrUbT8Tzc
--DurandalJs (Documentación, código, ejemplos, etc.): http://durandaljs.com/
+-DurandalJs (Docs, examples, etc): http://durandaljs.com/
+-Machine Specifications: https://github.com/machine/machine.specifications
+-NBuilder: https://code.google.com/p/nbuilder/
+-Autofac: https://github.com/autofac/Autofac
