@@ -1,16 +1,30 @@
-Dalaran Repository
-========
+# Dalaran
 
-Diseño web utilizado: http://flatsome.uxthemes.com/ 
--Convertido de Wordpress a HTML5
+## MVC5 test project to practice and learn about:  <br />
+-TDD <br />
+-Dependency injection  <br />
+-MVC5 as a web api  <br />
+-Frontend MVVM (other than angular)  <br />
 
-Página de Trello: https://trello.com/b/IRxKBwxJ/proyecto-x
+## Packages worth mentioning of this proj:  <br />
+### Backend:  <br />
+--MVC5  <br />
+--Autofac (Dependency Injection)  <br />
+--Automapper  <br />
+--Machine.Specifications (Testing and specs)  <br />
+--Moq (Mocks)  <br />
+--NBuilder (Test object generation)  <br />
 
-IP del Servidor: 190.4.47.20
--Puerto para accesar a la página web: 8080
--Puerto para accesar a MySQL: 3306
+### Frontend:  <br />
+--Durandaljs(frontend MVVM js framework)  <br />
 
-Otros links:
--KnockoutJs (Tutorial): http://learn.knockoutjs.com/
--Como crear un producto en Amazon: http://www.youtube.com/watch?v=jQwrUbT8Tzc
--DurandalJs (Documentación, código, ejemplos, etc.): http://durandaljs.com/
+
+## Web template: 
+http://flatsome.uxthemes.com/ 
+
+## Useful links:  <br />
+-KnockoutJs (Tutorial): http://learn.knockoutjs.com/  <br />
+-DurandalJs (Docs, examples, etc): http://durandaljs.com/  <br />
+-Machine Specifications: https://github.com/machine/machine.specifications  <br />
+-NBuilder: https://code.google.com/p/nbuilder/  <br />
+-Autofac: https://github.com/autofac/Autofac  <br />
