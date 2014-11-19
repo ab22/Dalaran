@@ -15,7 +15,6 @@ namespace Dalaran.DAL.Mappings
             this.Property(x => x.UserId)
                 .HasColumnName("UserId")
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-                .HasColumnName("Address")
             this.Property(x => x.Name)
                 .HasColumnName("Name")
                 .HasMaxLength(45);
